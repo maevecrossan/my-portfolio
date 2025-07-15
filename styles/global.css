@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 1rem;
+    background-color: #f0f0f0;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: #f0f0f0;
+}

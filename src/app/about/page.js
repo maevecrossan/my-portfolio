@@ -1,3 +1,3 @@
 export default function AboutMePage() {
-  return <h1>Previous Work</h1>;
+  return <h1>About Me</h1>;
 }

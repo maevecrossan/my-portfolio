@@ -9,12 +9,15 @@ body {
     font-family: sans-serif;
 }
 
+nav {
+    background-color: #f0f0f0;
+}
+
 nav ul {
     display: flex;
     gap: 1rem;
     list-style: none;
     padding: 1rem;
-    background-color: #f0f0f0;
 }
 
 footer {

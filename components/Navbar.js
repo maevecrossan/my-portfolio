@@ -35,18 +35,27 @@ export default function Navbar() {
                                 className="menu menu-sm dropdown-content mt-3 z-[1] w-52 rounded-box bg-base-100 p-2 shadow"
                             >
                                 <li>
-                                    <Link href="/">Home</Link>
+                                    <Link href="/" className="text-base">
+                                        Home
+                                    </Link>
                                 </li>
                                 <li>
-                                    <Link href="/previous-work">
+                                    <Link
+                                        href="/previous-work"
+                                        className="text-base"
+                                    >
                                         Previous Work
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/about">About</Link>
+                                    <Link href="/about" className="text-base">
+                                        About
+                                    </Link>
                                 </li>
                                 <li>
-                                    <Link href="/contact">Contact</Link>
+                                    <Link href="/contact" className="text-base">
+                                        Contact
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -55,9 +64,7 @@ export default function Navbar() {
                     {/* Logo */}
                     <div>
                         <h1 className="m-3 text-3xl">
-                            <Link href="/">
-                                Maeve Crossan
-                            </Link>
+                            <Link href="/">Maeve Crossan</Link>
                         </h1>
                     </div>
 
@@ -70,7 +77,10 @@ export default function Navbar() {
                         Home
                     </Link>
                     <span className="font-light">|</span>
-                    <Link href="/previous-work" className="btn btn-ghost text-lg">
+                    <Link
+                        href="/previous-work"
+                        className="btn btn-ghost text-lg"
+                    >
                         Previous Work
                     </Link>
                     <span className="font-light">|</span>

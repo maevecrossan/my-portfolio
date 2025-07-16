@@ -1,3 +1,3 @@
 export default function PreviousWorkPage() {
-    return <h1>Previous Work</h1>;
+    return <h2>Previous Work</h2>;
 }

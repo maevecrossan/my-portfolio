@@ -35,7 +35,7 @@ export default function Navbar() {
                                 className="menu menu-sm dropdown-content mt-3 z-[1] w-52 rounded-box bg-base-100 p-2 shadow"
                             >
                                 <li>
-                                    <Link href="/">Homepage</Link>
+                                    <Link href="/">Home</Link>
                                 </li>
                                 <li>
                                     <Link href="/previous-work">
@@ -60,12 +60,14 @@ export default function Navbar() {
                             </Link>
                         </h1>
                     </div>
+
+                    <div className="w-10 md:hidden" />
                 </div>
 
                 {/* Nav links: visible only on md+ screens */}
                 <div className="mt-2 hidden md:flex items-center space-x-2">
                     <Link href="/" className="btn btn-ghost">
-                        Homepage
+                        Home
                     </Link>
                     <span className="text-lg font-light">|</span>
                     <Link href="/previous-work" className="btn btn-ghost">

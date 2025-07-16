@@ -38,7 +38,7 @@ export default function Navbar() {
                                     <Link href="/">Homepage</Link>
                                 </li>
                                 <li>
-                                    <Link href="/portfolio">Portfolio</Link>
+                                    <Link href="/previous-work">Previous Work</Link>
                                 </li>
                                 <li>
                                     <Link href="/about">About</Link>
@@ -52,21 +52,11 @@ export default function Navbar() {
 
                     {/* Logo */}
                     <div>
-                        <Link href="/" className="btn btn-ghost text-xl">
-                            Maeve Crossan
-                        </Link>
-                    </div>
-
-                    {/* Contact button (mobile only) */}
-                    <div className="md:hidden">
-                        <div className="navbar-end">
-                            <Link
-                                href="/contact"
-                                className="btn btn-primary"
-                            >
-                                Contact
+                        <h1>
+                            <Link href="/" className="text-xl">
+                                Maeve Crossan
                             </Link>
-                        </div>
+                        </h1>
                     </div>
                 </div>
 

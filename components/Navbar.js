@@ -54,8 +54,8 @@ export default function Navbar() {
 
                     {/* Logo */}
                     <div>
-                        <h1>
-                            <Link href="/" className="text-xl">
+                        <h1 className="m-3 text-3xl">
+                            <Link href="/">
                                 Maeve Crossan
                             </Link>
                         </h1>
@@ -66,19 +66,19 @@ export default function Navbar() {
 
                 {/* Nav links: visible only on md+ screens */}
                 <div className="mt-2 hidden md:flex items-center space-x-2">
-                    <Link href="/" className="btn btn-ghost">
+                    <Link href="/" className="btn btn-ghost text-lg">
                         Home
                     </Link>
-                    <span className="text-lg font-light">|</span>
-                    <Link href="/previous-work" className="btn btn-ghost">
+                    <span className="font-light">|</span>
+                    <Link href="/previous-work" className="btn btn-ghost text-lg">
                         Previous Work
                     </Link>
-                    <span className="text-lg font-light">|</span>
-                    <Link href="/about" className="btn btn-ghost">
+                    <span className="font-light">|</span>
+                    <Link href="/about" className="btn btn-ghost text-lg">
                         About
                     </Link>
                     <span className="text-lg font-light">|</span>
-                    <Link href="/contact" className="btn btn-ghost">
+                    <Link href="/contact" className="btn btn-ghost text-lg">
                         Contact
                     </Link>
                 </div>

@@ -5,13 +5,6 @@ export default function Footer() {
     return (
         <footer className="bg-gray-100 mt-8">
             <div className="flex flex-col items-center bg-base-100 shadow-inner px-4 py-6 space-y-4">
-                {/* Centered Logo */}
-                <h1>
-                    <Link href="/" className="text-xl font-semibold">
-                        Maeve Crossan
-                    </Link>
-                </h1>
-
                 {/* Stacked Nav Links */}
                 <div className="flex flex-col items-center space-y-2">
                     <Link href="/" className="btn btn-ghost btn-sm">Homepage</Link>

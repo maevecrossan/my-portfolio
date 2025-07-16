@@ -38,7 +38,9 @@ export default function Navbar() {
                                     <Link href="/">Homepage</Link>
                                 </li>
                                 <li>
-                                    <Link href="/previous-work">Previous Work</Link>
+                                    <Link href="/previous-work">
+                                        Previous Work
+                                    </Link>
                                 </li>
                                 <li>
                                     <Link href="/about">About</Link>
@@ -61,16 +63,19 @@ export default function Navbar() {
                 </div>
 
                 {/* Nav links: visible only on md+ screens */}
-                <div className="mt-2 hidden md:flex space-x-4">
+                <div className="mt-2 hidden md:flex items-center space-x-2">
                     <Link href="/" className="btn btn-ghost">
                         Homepage
                     </Link>
+                    <span className="text-lg font-light">|</span>
                     <Link href="/previous-work" className="btn btn-ghost">
                         Previous Work
                     </Link>
+                    <span className="text-lg font-light">|</span>
                     <Link href="/about" className="btn btn-ghost">
                         About
                     </Link>
+                    <span className="text-lg font-light">|</span>
                     <Link href="/contact" className="btn btn-ghost">
                         Contact
                     </Link>

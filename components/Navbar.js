@@ -35,7 +35,7 @@ export default function Navbar() {
                                 className="menu menu-sm dropdown-content mt-3 z-[1] w-52 rounded-box bg-base-100 p-2 shadow"
                             >
                                 <li>
-                                    <Link href="/" className="text-base">
+                                    <Link href="/" className="text-base uppercase">
                                         Home
                                     </Link>
                                 </li>
@@ -63,7 +63,7 @@ export default function Navbar() {
 
                     {/* Logo */}
                     <div>
-                        <h1 className="m-3 text-3xl">
+                        <h1 className="m-3 text-3xl font-serif">
                             <Link href="/">Maeve Crossan</Link>
                         </h1>
                     </div>
@@ -72,23 +72,23 @@ export default function Navbar() {
                 </div>
 
                 {/* Nav links: visible only on md+ screens */}
-                <div className="mt-2 hidden md:flex items-center space-x-2">
-                    <Link href="/" className="btn btn-ghost text-lg">
+                <div className="mt-2 hidden md:flex items-center space-x-2 text-lg uppercase">
+                    <Link href="/" className="btn btn-ghost ">
                         Home
                     </Link>
                     <span className="font-light">|</span>
                     <Link
                         href="/previous-work"
-                        className="btn btn-ghost text-lg"
+                        className="btn btn-ghost"
                     >
                         Previous Work
                     </Link>
                     <span className="font-light">|</span>
-                    <Link href="/about" className="btn btn-ghost text-lg">
+                    <Link href="/about" className="btn btn-ghost">
                         About
                     </Link>
                     <span className="text-lg font-light">|</span>
-                    <Link href="/contact" className="btn btn-ghost text-lg">
+                    <Link href="/contact" className="btn btn-ghost">
                         Contact
                     </Link>
                 </div>

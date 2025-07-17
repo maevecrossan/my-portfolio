@@ -33,7 +33,7 @@ export default function Navbar() {
                             </div>
                             <ul
                                 tabIndex={0}
-                                className="menu menu-sm dropdown-content mt-3 z-[1] w-52 rounded-box bg-zinc-700 p-2 shadow uppercase font-teko"
+                                className="menu menu-sm dropdown-content mt-3 z-[1] w-52 rounded-box bg-zinc-700 p-2 shadow uppercase font-teko font-medium"
                             >
                                 <li>
                                     <Link
@@ -85,7 +85,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Nav links: visible only on md+ screens */}
-                <div className="mt-4 mb-1 hidden md:flex items-center text-xl uppercase tracking-widest font-teko whitespace-nowrap text-white">
+                <div className="mt-4 mb-1 hidden md:flex items-center text-xl uppercase tracking-widest font-teko whitespace-nowrap text-white font-medium">
                     <div className="flex gap-6 items-center">
                         {[
                             { href: "/", label: "Home" },

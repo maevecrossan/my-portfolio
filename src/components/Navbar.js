@@ -72,11 +72,11 @@ export default function Navbar() {
                     </div>
 
                     {/* Logo */}
-                    <div>
-                        <h1 className="mx-3 mt-4 text-5xl tracking-wider font-dmserif">
+                    <div className="font-dmserif">
+                        <h1 className="mx-3 mt-4 text-5xl tracking-wider">
                             <Link href="/">Maeve Crossan</Link>
                         </h1>
-                        <p className="mx-3 mt-4 text-xl tracking-wider text-center font-dmserif">
+                        <p className="mx-3 mt-4 text-xl tracking-wider text-center">
                             <Link href="/">Full Stack Developer</Link>
                         </p>
                     </div>

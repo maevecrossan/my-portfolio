@@ -1,5 +1,9 @@
 import Image from "next/image";
 
 export default function Homepage() {
-    return <h1> Home page </h1>
+    return (
+        <main className="flex flex-col items-center justify-center min-h-screen">
+            <h2>Home</h2>
+        </main>
+    )
 }

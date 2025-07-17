@@ -1,3 +1,7 @@
 export default function ContactPage() {
-    return <h2>Contact Page</h2>;
+    return (
+        <main className="flex flex-col items-center justify-center min-h-screen">
+            <h2>Contact</h2>
+        </main>
+    )
 }

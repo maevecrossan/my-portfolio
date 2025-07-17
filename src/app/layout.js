@@ -14,16 +14,16 @@ const dmserif = DM_Serif_Text({
 });
 
 const teko = Teko({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  display: "swap",
+    subsets: ["latin"],
+    weight: ["400", "700"],
+    display: "swap",
 });
 
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className="min-h-screen flex flex-col">
-                <Navbar dmserif={dmserif.className} teko={teko.className}/>
+                <Navbar dmserif={dmserif.className} teko={teko.className} />
                 <main className="flex-grow">{children}</main>
                 <Footer />
             </body>

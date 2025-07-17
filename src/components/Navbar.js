@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 
-
 export default function Navbar() {
     return (
         <nav className="bg-zinc-900 shadow-xl">
@@ -86,10 +85,7 @@ export default function Navbar() {
 
                 {/* Nav links: visible only on md+ screens */}
                 <div className="mt-4 mb-1 hidden md:flex items-center text-xl uppercase tracking-widest font-teko">
-                    <Link
-                        href="/"
-                        className="px-5 hidden md:flex items-center"
-                    >
+                    <Link href="/" className="px-5 hidden md:flex items-center">
                         Home
                     </Link>
                     <span>|</span>

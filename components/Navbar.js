@@ -78,10 +78,10 @@ export default function Navbar({ dmserif, teko }) {
 
                     {/* Logo */}
                     <div>
-                        <h1 className={`${dmserif} m-3 text-5xl tracking-wider`}>
+                        <h1 className={`${dmserif} mx-3 mt-4 text-5xl tracking-wider`}>
                             <Link href="/">Maeve Crossan</Link>
                         </h1>
-                        <p className={`${dmserif} m-4 text-xl tracking-wider`}>
+                        <p className={`${dmserif} mx-3 mt-4 text-xl tracking-wider text-center`}>
                             <Link href="/">Full Stack Developer</Link>
                         </p>
                     </div>

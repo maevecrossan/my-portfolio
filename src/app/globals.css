@@ -14,7 +14,8 @@
 }
 
 @theme {
-    --color-raisin-black: #271525; /* Navbar & Footer */
+    --color-raisin-black: #271525; /* Navbar */
+    --color-ny-pink: #D88E83; /* Footer */
 }
 
 @media (prefers-color-scheme: dark) {

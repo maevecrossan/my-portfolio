@@ -33,11 +33,12 @@ export default function Navbar() {
                             </div>
                             <ul
                                 tabIndex={0}
-                                className="menu menu-sm dropdown-content mt-3 z-[1] w-52 rounded-box bg-zinc-700 p-2 shadow uppercase  font-teko"
+                                className="menu menu-sm dropdown-content mt-3 z-[1] w-52 rounded-box bg-zinc-700 p-2 shadow uppercase font-teko"
                             >
                                 <li>
                                     <Link
                                         href="/"
+                                        className="text-2xl tracking-widest"
                                     >
                                         Home
                                     </Link>
@@ -45,6 +46,7 @@ export default function Navbar() {
                                 <li>
                                     <Link
                                         href="/previous-work"
+                                        className="text-2xl tracking-widest"
                                     >
                                         Previous Work
                                     </Link>
@@ -52,6 +54,7 @@ export default function Navbar() {
                                 <li>
                                     <Link
                                         href="/about"
+                                        className="text-2xl tracking-widest"
                                     >
                                         About
                                     </Link>
@@ -59,6 +62,7 @@ export default function Navbar() {
                                 <li>
                                     <Link
                                         href="/contact"
+                                        className="text-2xl tracking-widest"
                                     >
                                         Contact
                                     </Link>
@@ -81,31 +85,31 @@ export default function Navbar() {
                 </div>
 
                 {/* Nav links: visible only on md+ screens */}
-                <div className="mt-4 mb-1 hidden md:flex items-center text-lg uppercase">
+                <div className="mt-4 mb-1 hidden md:flex items-center text-xl uppercase tracking-widest font-teko">
                     <Link
                         href="/"
-                        className="px-5 hidden md:flex items-center font-teko"
+                        className="px-5 hidden md:flex items-center"
                     >
                         Home
                     </Link>
-                    <span className="font-light">|</span>
+                    <span>|</span>
                     <Link
                         href="/previous-work"
-                        className="px-5 hidden md:flex items-center font-teko"
+                        className="px-5 hidden md:flex items-center"
                     >
                         Previous Work
                     </Link>
-                    <span className="font-light">|</span>
+                    <span>|</span>
                     <Link
                         href="/about"
-                        className="px-5 hidden md:flex items-center font-teko"
+                        className="px-5 hidden md:flex items-center"
                     >
                         About
                     </Link>
-                    <span className="font-light">|</span>
+                    <span>|</span>
                     <Link
                         href="/contact"
-                        className="px-5 hidden md:flex items-center font-teko"
+                        className="px-5 hidden md:flex items-center"
                     >
                         Contact
                     </Link>

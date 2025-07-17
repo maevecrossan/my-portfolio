@@ -1,13 +1,8 @@
 "use client";
 import Link from "next/link";
-import { Teko } from "next/font/google";
 
-const teko = Teko({
-    subsets: ["latin"],
-    weight: ["400", "700"],
-});
 
-export default function Navbar({ dmserif, teko }) {
+export default function Navbar() {
     return (
         <nav className="bg-zinc-900 shadow-xl">
             <div className="flex flex-col items-center px-4 py-2">
@@ -78,10 +73,10 @@ export default function Navbar({ dmserif, teko }) {
 
                     {/* Logo */}
                     <div>
-                        <h1 className="mx-3 mt-4 text-5xl tracking-wider font-serif">
+                        <h1 className="mx-3 mt-4 text-5xl tracking-wider font-dmserif">
                             <Link href="/">Maeve Crossan</Link>
                         </h1>
-                        <p className="mx-3 mt-4 text-xl tracking-wider text-center font-serif">
+                        <p className="mx-3 mt-4 text-xl tracking-wider text-center font-dmserif">
                             <Link href="/">Full Stack Developer</Link>
                         </p>
                     </div>
@@ -93,28 +88,28 @@ export default function Navbar({ dmserif, teko }) {
                 <div className="mt-4 mb-1 hidden md:flex items-center text-lg uppercase">
                     <Link
                         href="/"
-                        className={`px-5 hidden md:flex items-center text-lg uppercase ${teko}`}
+                        className="px-5 hidden md:flex items-center font-teko"
                     >
                         Home
                     </Link>
-                    <span className={`font-light ${teko}`}>|</span>
+                    <span className="font-light">|</span>
                     <Link
                         href="/previous-work"
-                        className={`px-5 hidden md:flex items-center text-lg uppercase ${teko}`}
+                        className="px-5 hidden md:flex items-center font-teko"
                     >
                         Previous Work
                     </Link>
-                    <span className={`font-light ${teko}`}>|</span>
+                    <span className="font-light">|</span>
                     <Link
                         href="/about"
-                        className={`px-5 hidden md:flex items-center text-lg uppercase ${teko}`}
+                        className="px-5 hidden md:flex items-center font-teko"
                     >
                         About
                     </Link>
-                    <span className={`font-light ${teko}`}>|</span>
+                    <span className="font-light">|</span>
                     <Link
                         href="/contact"
-                        className={`px-5 hidden md:flex items-center space-x-2 text-lg uppercase ${teko}`}
+                        className="px-5 hidden md:flex items-center font-teko"
                     >
                         Contact
                     </Link>

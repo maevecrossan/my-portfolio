@@ -78,40 +78,43 @@ export default function Navbar({ dmserif, teko }) {
 
                     {/* Logo */}
                     <div>
-                        <h1 className={`${dmserif} m-3 text-3xl`}>
+                        <h1 className={`${dmserif} m-3 text-5xl tracking-wider`}>
                             <Link href="/">Maeve Crossan</Link>
                         </h1>
+                        <p className={`${dmserif} m-4 text-xl tracking-wider`}>
+                            <Link href="/">Full Stack Developer</Link>
+                        </p>
                     </div>
 
                     <div className="w-10 md:hidden" />
                 </div>
 
                 {/* Nav links: visible only on md+ screens */}
-                <div className="mt-2 hidden md:flex items-center space-x-2 text-lg uppercase">
+                <div className="mt-4 mb-1 hidden md:flex items-center text-lg uppercase">
                     <Link
                         href="/"
-                        className={`mt-0.5 hidden md:flex items-center space-x-2 text-lg uppercase ${teko}`}
+                        className={`px-5 hidden md:flex items-center text-lg uppercase ${teko}`}
                     >
                         Home
                     </Link>
                     <span className={`font-light ${teko}`}>|</span>
                     <Link
                         href="/previous-work"
-                        className={`mt-0.5 hidden md:flex items-center space-x-2 text-lg uppercase ${teko}`}
+                        className={`px-5 hidden md:flex items-center text-lg uppercase ${teko}`}
                     >
                         Previous Work
                     </Link>
                     <span className={`font-light ${teko}`}>|</span>
                     <Link
                         href="/about"
-                        className={`mt-0.5 hidden md:flex items-center space-x-2 text-lg uppercase ${teko}`}
+                        className={`px-5 hidden md:flex items-center text-lg uppercase ${teko}`}
                     >
                         About
                     </Link>
                     <span className={`font-light ${teko}`}>|</span>
                     <Link
                         href="/contact"
-                        className={`mt-0.5 hidden md:flex items-center space-x-2 text-lg uppercase ${teko}`}
+                        className={`px-5 hidden md:flex items-center space-x-2 text-lg uppercase ${teko}`}
                     >
                         Contact
                     </Link>

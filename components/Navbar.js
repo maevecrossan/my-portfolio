@@ -9,8 +9,8 @@ const teko = Teko({
 
 export default function Navbar({ dmserif, teko }) {
     return (
-        <nav className="bg-gray-100">
-            <div className="flex flex-col items-center bg-base-100 shadow-sm px-4 py-2">
+        <nav className="bg-raisin-black">
+            <div className="flex flex-col items-center shadow-sm px-4 py-2">
                 {/* Top row: burger + logo (mobile), just logo (desktop) */}
                 <div className="flex w-full items-center justify-between md:justify-center">
                     {/* Burger menu: only visible on mobile */}
@@ -43,7 +43,7 @@ export default function Navbar({ dmserif, teko }) {
                                 <li>
                                     <Link
                                         href="/"
-                                        className={`${teko.className} text-base uppercase`}
+                                        className="text-base uppercase"
                                     >
                                         Home
                                     </Link>
@@ -51,7 +51,7 @@ export default function Navbar({ dmserif, teko }) {
                                 <li>
                                     <Link
                                         href="/previous-work"
-                                        className={`${teko.className} text-base uppercase`}
+                                        className="text-base uppercase"
                                     >
                                         Previous Work
                                     </Link>
@@ -59,7 +59,7 @@ export default function Navbar({ dmserif, teko }) {
                                 <li>
                                     <Link
                                         href="/about"
-                                        className={`${teko.className} text-base uppercase`}
+                                        className="text-base uppercase"
                                     >
                                         About
                                     </Link>
@@ -67,7 +67,7 @@ export default function Navbar({ dmserif, teko }) {
                                 <li>
                                     <Link
                                         href="/contact"
-                                        className={`${teko.className} text-base uppercase`}
+                                        className="text-base uppercase"
                                     >
                                         Contact
                                     </Link>
@@ -78,10 +78,10 @@ export default function Navbar({ dmserif, teko }) {
 
                     {/* Logo */}
                     <div>
-                        <h1 className={`${dmserif} mx-3 mt-4 text-5xl tracking-wider`}>
+                        <h1 className="mx-3 mt-4 text-5xl tracking-wider font-serif">
                             <Link href="/">Maeve Crossan</Link>
                         </h1>
-                        <p className={`${dmserif} mx-3 mt-4 text-xl tracking-wider text-center`}>
+                        <p className="mx-3 mt-4 text-xl tracking-wider text-center font-serif">
                             <Link href="/">Full Stack Developer</Link>
                         </p>
                     </div>

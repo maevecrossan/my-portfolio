@@ -9,8 +9,8 @@ const teko = Teko({
 
 export default function Navbar({ dmserif, teko }) {
     return (
-        <nav className="bg-raisin-black">
-            <div className="flex flex-col items-center shadow-sm px-4 py-2">
+        <nav className="bg-zinc-900 shadow-xl">
+            <div className="flex flex-col items-center px-4 py-2">
                 {/* Top row: burger + logo (mobile), just logo (desktop) */}
                 <div className="flex w-full items-center justify-between md:justify-center">
                     {/* Burger menu: only visible on mobile */}

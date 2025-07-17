@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import React from "react";
 
 export default function Navbar() {
     return (
@@ -84,31 +85,33 @@ export default function Navbar() {
                 </div>
 
                 {/* Nav links: visible only on md+ screens */}
-                <div className="mt-4 mb-1 hidden md:flex items-center text-xl uppercase tracking-widest font-teko">
-                    <Link href="/" className="px-5 hidden md:flex items-center">
-                        Home
-                    </Link>
-                    <span>|</span>
-                    <Link
-                        href="/previous-work"
-                        className="px-5 hidden md:flex items-center"
-                    >
-                        Previous Work
-                    </Link>
-                    <span>|</span>
-                    <Link
-                        href="/about"
-                        className="px-5 hidden md:flex items-center"
-                    >
-                        About
-                    </Link>
-                    <span>|</span>
-                    <Link
-                        href="/contact"
-                        className="px-5 hidden md:flex items-center"
-                    >
-                        Contact
-                    </Link>
+                <div className="mt-4 mb-1 hidden md:flex items-center text-xl uppercase tracking-widest font-teko whitespace-nowrap text-white">
+                    <div className="flex gap-6 items-center">
+                        {[
+                            { href: "/", label: "Home" },
+                            { href: "/previous-work", label: "Previous Work" },
+                            { href: "/about", label: "About" },
+                            { href: "/contact", label: "Contact" },
+                        ].map((link, index) => (
+                            <React.Fragment key={link.href}>
+                                <div className="group relative w-max">
+                                    <Link
+                                        href={link.href}
+                                        className="text-white"
+                                    >
+                                        <span>{link.label}</span>
+                                        <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-3/6" />
+                                        <span className="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-3/6" />
+                                    </Link>
+                                </div>
+                                {index < 3 && (
+                                    <span className="font-light text-white">
+                                        |
+                                    </span>
+                                )}
+                            </React.Fragment>
+                        ))}
+                    </div>
                 </div>
             </div>
         </nav>

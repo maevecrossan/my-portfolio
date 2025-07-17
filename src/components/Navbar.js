@@ -33,12 +33,12 @@ export default function Navbar() {
                             </div>
                             <ul
                                 tabIndex={0}
-                                className="menu menu-sm dropdown-content mt-3 z-[1] w-52 rounded-box bg-base-100 p-2 shadow"
+                                className="menu menu-sm dropdown-content mt-3 z-[1] w-52 rounded-box bg-zinc-700 p-2 shadow uppercase"
                             >
                                 <li>
                                     <Link
                                         href="/"
-                                        className="text-base uppercase"
+                                        className="text-base"
                                     >
                                         Home
                                     </Link>
@@ -46,7 +46,7 @@ export default function Navbar() {
                                 <li>
                                     <Link
                                         href="/previous-work"
-                                        className="text-base uppercase"
+                                        className="text-base"
                                     >
                                         Previous Work
                                     </Link>
@@ -54,7 +54,7 @@ export default function Navbar() {
                                 <li>
                                     <Link
                                         href="/about"
-                                        className="text-base uppercase"
+                                        className="text-base"
                                     >
                                         About
                                     </Link>
@@ -62,7 +62,7 @@ export default function Navbar() {
                                 <li>
                                     <Link
                                         href="/contact"
-                                        className="text-base uppercase"
+                                        className="text-base"
                                     >
                                         Contact
                                     </Link>

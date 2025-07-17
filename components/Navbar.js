@@ -1,7 +1,13 @@
 "use client";
 import Link from "next/link";
+import { Teko } from "next/font/google";
 
-export default function Navbar() {
+const teko = Teko({
+    subsets: ["latin"],
+    weight: ["400", "700"],
+});
+
+export default function Navbar({ dmserif, teko }) {
     return (
         <nav className="bg-gray-100">
             <div className="flex flex-col items-center bg-base-100 shadow-sm px-4 py-2">
@@ -35,25 +41,34 @@ export default function Navbar() {
                                 className="menu menu-sm dropdown-content mt-3 z-[1] w-52 rounded-box bg-base-100 p-2 shadow"
                             >
                                 <li>
-                                    <Link href="/" className="text-base uppercase">
+                                    <Link
+                                        href="/"
+                                        className={`${teko.className} text-base uppercase`}
+                                    >
                                         Home
                                     </Link>
                                 </li>
                                 <li>
                                     <Link
                                         href="/previous-work"
-                                        className="text-base"
+                                        className={`${teko.className} text-base uppercase`}
                                     >
                                         Previous Work
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/about" className="text-base">
+                                    <Link
+                                        href="/about"
+                                        className={`${teko.className} text-base uppercase`}
+                                    >
                                         About
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/contact" className="text-base">
+                                    <Link
+                                        href="/contact"
+                                        className={`${teko.className} text-base uppercase`}
+                                    >
                                         Contact
                                     </Link>
                                 </li>
@@ -63,7 +78,7 @@ export default function Navbar() {
 
                     {/* Logo */}
                     <div>
-                        <h1 className="m-3 text-3xl font-serif">
+                        <h1 className={`${dmserif} m-3 text-3xl`}>
                             <Link href="/">Maeve Crossan</Link>
                         </h1>
                     </div>
@@ -73,22 +88,31 @@ export default function Navbar() {
 
                 {/* Nav links: visible only on md+ screens */}
                 <div className="mt-2 hidden md:flex items-center space-x-2 text-lg uppercase">
-                    <Link href="/" className="btn btn-ghost ">
+                    <Link
+                        href="/"
+                        className={`mt-0.5 hidden md:flex items-center space-x-2 text-lg uppercase ${teko}`}
+                    >
                         Home
                     </Link>
-                    <span className="font-light">|</span>
+                    <span className={`font-light ${teko}`}>|</span>
                     <Link
                         href="/previous-work"
-                        className="btn btn-ghost"
+                        className={`mt-0.5 hidden md:flex items-center space-x-2 text-lg uppercase ${teko}`}
                     >
                         Previous Work
                     </Link>
-                    <span className="font-light">|</span>
-                    <Link href="/about" className="btn btn-ghost">
+                    <span className={`font-light ${teko}`}>|</span>
+                    <Link
+                        href="/about"
+                        className={`mt-0.5 hidden md:flex items-center space-x-2 text-lg uppercase ${teko}`}
+                    >
                         About
                     </Link>
-                    <span className="text-lg font-light">|</span>
-                    <Link href="/contact" className="btn btn-ghost">
+                    <span className={`font-light ${teko}`}>|</span>
+                    <Link
+                        href="/contact"
+                        className={`mt-0.5 hidden md:flex items-center space-x-2 text-lg uppercase ${teko}`}
+                    >
                         Contact
                     </Link>
                 </div>

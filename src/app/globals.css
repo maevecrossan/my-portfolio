@@ -13,12 +13,6 @@
     --font-mono: var(--font-geist-mono);
 }
 
-@theme {
-    --color-raisin-black: #271525; /* Navbar */
-    --color-ny-pink: #D88E83; /* Footer */
-    --color-sandy-brown: #F9A45F /* General Background */
-}
-
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #0a0a0a;

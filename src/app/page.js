@@ -51,7 +51,8 @@ export default function Homepage() {
                     <Link href="/about">Learn more</Link>
                 </button>
             </div>
-            <div className="rounded-box p-10 bg-zinc-900 shadow-xl flex flex-col items-center">
+
+            <div className="rounded-box w-full max-w-screen-lg mx-auto px-4 py-10 bg-zinc-900 shadow-xl flex flex-col items-center">
                 <h3 className="mb-6 text-2xl font-semibold font-dmserif text-center underline">
                     Previous Work
                 </h3>
@@ -60,6 +61,7 @@ export default function Homepage() {
                     <Link href="/previous-work">View Previous Work</Link>
                 </button>
             </div>
+
             <div className="rounded-box m-10 p-10 bg-white dark-grey-font shadow-xl">
                 <h2 className="mb-6 text-2xl font-semibold font-dmserif underline">
                     Have a question?

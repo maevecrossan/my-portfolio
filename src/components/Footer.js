@@ -7,10 +7,10 @@ export default function Footer() {
             <div className="flex flex-col items-center shadow-inner px-4 py-6 bg-zinc-900 space-y-4">
                 {/* Stacked Nav Links */}
                 <div className="flex flex-col items-center space-y-2">
-                    <Link href="/" className="btn btn-ghost btn-sm">Homepage</Link>
-                    <Link href="/previous-work" className="btn btn-ghost btn-sm">Previous Work</Link>
-                    <Link href="/about" className="btn btn-ghost btn-sm">About</Link>
-                    <Link href="/contact" className="btn btn-ghost btn-sm">Contact</Link>
+                    <Link href="/" className="font-teko items-center text-xl tracking-widest">Homepage</Link>
+                    <Link href="/previous-work" className="font-teko items-center text-xl tracking-widest">Previous Work</Link>
+                    <Link href="/about" className="font-teko items-center text-xl tracking-widest">About</Link>
+                    <Link href="/contact" className="font-teko items-center text-xl tracking-widest">Contact</Link>
                 </div>
 
                 {/* Footer Note */}

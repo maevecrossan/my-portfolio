@@ -33,3 +33,7 @@ body {
 .font-teko {
     font-family: var(--font-teko), serif;
 }
+
+.dark-grey-font {
+    color: rgb(37, 37, 37);
+}

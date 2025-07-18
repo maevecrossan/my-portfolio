@@ -1,4 +1,5 @@
 import Carousel from "../components/Carousel";
+import Link from "next/link";
 
 const images = [
     {
@@ -35,9 +36,30 @@ const images = [
 
 export default function Homepage() {
     return (
-        <main className="flex flex-col items-center justify-center min-h-screen font-roboto p-4">
-            <h2 className="mb-6 text-2xl font-semibold">Home</h2>
-            <Carousel images={images} />
+        <main className="flex flex-col items-center justify-center min-h-screen p-4">
+            <div className="rounded-box m-10 p-10 bg-white dark-grey-font shadow-xl">
+                <h2 className="mb-6 text-2xl font-semibold font-dmserif underline">
+                    Hi there!
+                </h2>
+                <p>I&apos;m Maeve, nice to meet you.</p>
+                <p>
+                    I&apos;m a full stack developer with a special interest in front
+                    end development. You can learn more about me by clicking the
+                    button below.
+                </p>
+                <button className="btn btn-neutral rounded mt-5">
+                    <Link href="/about">Learn more</Link>
+                </button>
+            </div>
+            <div className="rounded-box p-10 bg-zinc-900 shadow-xl flex flex-col items-center">
+                <h3 className="mb-6 text-2xl font-semibold font-dmserif text-center underline">
+                    Previous Work
+                </h3>
+                <Carousel images={images} />
+                <button className="btn rounded mt-5">
+                    <Link href="/previous-work">View Previous Work</Link>
+                </button>
+            </div>
         </main>
     );
 }

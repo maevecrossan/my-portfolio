@@ -76,9 +76,9 @@ export default function Navbar() {
                         <h1 className="mx-3 mt-4 text-5xl tracking-wider">
                             <Link href="/">Maeve Crossan</Link>
                         </h1>
-                        <p className="mx-3 my-4 text-xl tracking-wider text-center">
+                        <h2 className="mx-3 my-4 text-xl tracking-wider text-center">
                             Full Stack Developer
-                        </p>
+                        </h2>
                     </div>
 
                     <div className="w-10 md:hidden" />

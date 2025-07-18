@@ -38,9 +38,9 @@ export default function Homepage() {
     return (
         <main className="flex flex-col items-center justify-center min-h-screen p-4">
             <div className="rounded-box m-10 p-10 bg-white dark-grey-font shadow-xl">
-                <h2 className="mb-6 text-2xl font-semibold font-dmserif underline">
+                <h3 className="mb-6 text-2xl font-semibold font-dmserif underline">
                     Hi there!
-                </h2>
+                </h3>
                 <p>I&apos;m Maeve, nice to meet you.</p>
                 <p>
                     I&apos;m a full stack developer with a special interest in front
@@ -53,9 +53,9 @@ export default function Homepage() {
             </div>
 
             <div className="rounded-box w-full max-w-screen-lg mx-auto px-4 py-10 bg-zinc-900 shadow-xl flex flex-col items-center">
-                <h3 className="mb-6 text-2xl font-semibold font-dmserif text-center underline">
+                <h4 className="mb-6 text-2xl font-semibold font-dmserif text-center underline">
                     Previous Work
-                </h3>
+                </h4>
                 <Carousel images={images} />
                 <button className="btn rounded mt-5">
                     <Link href="/previous-work">View Previous Work</Link>
@@ -63,9 +63,9 @@ export default function Homepage() {
             </div>
 
             <div className="rounded-box m-10 p-10 bg-white dark-grey-font shadow-xl">
-                <h2 className="mb-6 text-2xl font-semibold font-dmserif underline">
+                <h4 className="mb-6 text-2xl font-semibold font-dmserif underline">
                     Have a question?
-                </h2>
+                </h4>
                 <p>
                     Do you have a question about me or my work? Have a project in mind? Reach out to me below and lets connect.
                 </p>

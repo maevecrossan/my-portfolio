@@ -77,7 +77,7 @@ export default function Navbar() {
                             <Link href="/">Maeve Crossan</Link>
                         </h1>
                         <p className="mx-3 my-4 text-xl tracking-wider text-center">
-                            <Link href="/">Full Stack Developer</Link>
+                            Full Stack Developer
                         </p>
                     </div>
 

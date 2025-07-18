@@ -60,6 +60,17 @@ export default function Homepage() {
                     <Link href="/previous-work">View Previous Work</Link>
                 </button>
             </div>
+            <div className="rounded-box m-10 p-10 bg-white dark-grey-font shadow-xl">
+                <h2 className="mb-6 text-2xl font-semibold font-dmserif underline">
+                    Have a question?
+                </h2>
+                <p>
+                    Do you have a question about me or my work? Have a project in mind? Reach out to me below and lets connect.
+                </p>
+                <button className="btn btn-neutral rounded mt-5">
+                    <Link href="/contact">Get in touch</Link>
+                </button>
+            </div>
         </main>
     );
 }

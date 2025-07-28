@@ -7,10 +7,10 @@ export default function Footer() {
             <div className="flex flex-col items-center shadow-inner px-4 py-6 space-y-4">
                 {/* Stacked Nav Links */}
                 <div className="flex flex-col items-center space-y-2">
-                    <Link href="/" className="font-teko items-center text-xl tracking-widest">Homepage</Link>
-                    <Link href="/previous-work" className="font-teko items-center text-xl tracking-widest">Previous Work</Link>
-                    <Link href="/about" className="font-teko items-center text-xl tracking-widest">About</Link>
-                    <Link href="/contact" className="font-teko items-center text-xl tracking-widest">Contact</Link>
+                    <Link href="/" className="font-teko items-center text-xl tracking-widest text-purple-900/50 hover:text-purple-900 transition-colors duration-300">Homepage</Link>
+                    <Link href="/previous-work" className="font-teko items-center text-xl tracking-widest text-purple-900/50 hover:text-purple-900 transition-colors duration-300">Previous Work</Link>
+                    <Link href="/about" className="font-teko items-center text-xl tracking-widest text-purple-900/50 hover:text-purple-900 transition-colors duration-300">About</Link>
+                    <Link href="/contact" className="font-teko items-center text-xl tracking-widest text-purple-900/50 hover:text-purple-900 transition-colors duration-300">Contact</Link>
                 </div>
 
                 {/* Footer Note */}

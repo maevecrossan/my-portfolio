@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className={`${dmserif.variable} ${roboto.variable} ${teko.variable}`}>
-            <body className="min-h-screen flex flex-col">
+            <body className="min-h-screen flex flex-col gradient-bg">
                 <Navbar />
                 <main className="flex-grow">{children}</main>
                 <Footer />

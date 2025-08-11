@@ -22,8 +22,12 @@
 } */
 
 body {
-    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
     font-family: var(--font-roboto), sans-serif;
+}
+
+.gradient-bg {
+    background: #a4bbf5;
+    background: radial-gradient(circle, rgba(164, 187, 245, 1) 17%, rgba(184, 159, 252, 1) 50%, rgba(226, 237, 180, 1) 75%, rgba(227, 157, 221, 1) 93%);
 }
 
 .font-dmserif {
@@ -33,4 +37,3 @@ body {
 .font-teko {
     font-family: var(--font-teko), serif;
 }
-

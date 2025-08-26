@@ -23,3 +23,11 @@ export const teko = localFont({
     variable: "--font-teko",
     display: "swap",
 });
+
+export const caprasimo = localFont({
+    src: "../fonts/Caprasimo-Regular.ttf",
+    variable: "--font-caprasimo",
+    weight: "400",
+    style: "normal",
+    display: "swap",
+});

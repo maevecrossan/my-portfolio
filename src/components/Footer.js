@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="bg-white/50 mt-8">
+        <footer className="bg-amber-50 mt-8">
             <div className="flex flex-col items-center shadow-inner px-4 py-6 space-y-4">
                 {/* Stacked Nav Links */}
                 <div className="flex flex-col items-center space-y-2">

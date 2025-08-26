@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "./globals.css";
-import { dmserif, roboto, teko } from "./fonts";
+import { dmserif, roboto, teko, caprasimo } from "./fonts";
 
 export const metadata = {
     title: "My Portfolio Site",
@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" className={`${dmserif.variable} ${roboto.variable} ${teko.variable}`}>
+        <html lang="en" className={`${dmserif.variable} ${roboto.variable} ${teko.variable} ${caprasimo.variable}`}>
             <body className="min-h-screen flex flex-col gradient-bg">
                 <Navbar />
                 <main className="flex-grow">{children}</main>

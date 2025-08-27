@@ -53,9 +53,9 @@ export default function Homepage() {
                 className="m-6 md:m-10 w-full max-w-3xl rounded-3xl p-8 md:p-10 bg-blue-50/60 backdrop-blur-xl border border-white/40 ring-1 ring-white/30 shadow-xl text-zinc-800"
                 aria-labelledby="intro-heading"
             >
-                <h1 id="intro-heading" className="mb-6 text-3xl md:text-4xl font-caprasimo text-rose-400">
+                <h2 id="intro-heading" className="mb-6 text-3xl md:text-4xl font-caprasimo text-rose-400">
                     Hello!
-                </h1>
+                </h2>
                 <p className="text-zinc-700/90">I&apos;m Maeve, nice to meet you.</p>
                 <p className="text-zinc-700/90">
                     I&apos;m a full-stack developer with a special interest in front-end development. You can learn more about me by clicking the button below.

@@ -43,22 +43,18 @@ const images = [
 export default function Homepage() {
     return (
         <>
-            <a
-                href="#main-content"
-                className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:p-3 focus:bg-white focus:text-black focus:shadow-lg rounded"
-            >
-                Skip to main content
-            </a>
             <main
                 id="main-content"
-                className="flex flex-col items-center min-h-screen w-full p-6 md:p-10 bg-blue-200"
+                className="flex flex-col items-center min-h-screen w-full p-6 md:p-10"
             >
+                
+            {/* Greeting */}
             <section
-                className="m-6 md:m-10 w-full max-w-3xl rounded-3xl p-8 md:p-10 bg-amber-50/40 backdrop-blur-xl border border-white/40 ring-1 ring-white/30 shadow-xl text-zinc-800"
+                className="m-6 md:m-10 w-full max-w-3xl rounded-3xl p-8 md:p-10 bg-blue-50/60 backdrop-blur-xl border border-white/40 ring-1 ring-white/30 shadow-xl text-zinc-800"
                 aria-labelledby="intro-heading"
             >
                 <h1 id="intro-heading" className="mb-6 text-3xl md:text-4xl font-caprasimo text-rose-400">
-                    Hi there!
+                    Hello!
                 </h1>
                 <p className="text-zinc-700/90">I&apos;m Maeve, nice to meet you.</p>
                 <p className="text-zinc-700/90">
@@ -72,8 +68,9 @@ export default function Homepage() {
                 </Link>
             </section>
 
+            {/* Previous Work */}
             <section
-                className="w-full max-w-5xl mx-auto px-4 py-10 md:py-14 rounded-3xl bg-amber-50/40 backdrop-blur-xl border border-white/40 ring-1 ring-white/30 shadow-xl text-zinc-800 flex flex-col items-center"
+                className="w-full max-w-5xl mx-auto px-4 py-10 md:py-14 rounded-3xl bg-blue-50/60 backdrop-blur-xl border border-white/40 ring-1 ring-white/30 shadow-xl text-zinc-800 flex flex-col items-center"
                 aria-labelledby="work-heading"
             >
                 <h2 id="work-heading" className="mb-6 text-3xl md:text-4xl font-caprasimo text-rose-400 text-center">
@@ -91,8 +88,9 @@ export default function Homepage() {
                 </Link>
             </section>
 
+            {/* Contact Me */}
             <section
-                className="m-6 md:m-10 w-full max-w-3xl rounded-3xl p-8 md:p-10 bg-amber-50/40 backdrop-blur-xl border border-white/40 ring-1 ring-white/30 shadow-xl text-zinc-800"
+                className="m-6 md:m-10 w-full max-w-3xl rounded-3xl p-8 md:p-10 bg-blue-50/60 backdrop-blur-xl border border-white/40 ring-1 ring-white/30 shadow-xl text-zinc-800"
                 aria-labelledby="contact-heading"
             >
                 <h2 id="contact-heading" className="mb-6 text-3xl md:text-4xl font-caprasimo text-rose-400">

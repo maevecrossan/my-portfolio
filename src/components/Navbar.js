@@ -72,8 +72,8 @@ export default function Navbar() {
                     </div>
 
                     {/* Logo */}
-                    <div className="font-caprasimo text-rose-300">
-                        <h1 className="mx-3 mt-4 text-5xl tracking-wider">
+                    <div className="font-caprasimo text-rose-300 flex flex-col items-center justify-center">
+                        <h1 className="mx-3 mt-4 text-5xl tracking-wider text-center">
                             <Link href="/">Maeve Crossan</Link>
                         </h1>
                         <h2 className="mx-3 my-4 text-xl tracking-wider text-center font-semibold text-rose-200">

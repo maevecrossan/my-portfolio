@@ -105,7 +105,7 @@ export default function Navbar() {
                                     </Link>
                                 </div>
                                 {index < 3 && (
-                                    <span className="font-light text-white">
+                                    <span className="font-light text-orange-100">
                                         |
                                     </span>
                                 )}

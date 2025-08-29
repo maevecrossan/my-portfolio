@@ -166,7 +166,7 @@ export default function AboutMePage() {
                                 {/* Skills */}
                                 <div className="border-t border-rose-200 pt-4 mt-4">
                                     <h6 className="font-semibold text-rose-300 mb-2">Skills</h6>
-                                    <div className="flex flex-wrap gap-2 text-sm m-1">
+                                    <div className="flex flex-wrap gap-2 text-sm">
                                         {[
                                             'HTML',
                                             'CSS',
@@ -177,6 +177,7 @@ export default function AboutMePage() {
                                             'Tailwind CSS',
                                             'Next.js',
                                             'Node.js',
+                                            'AI Integration',
                                             'Microsoft Suite',
                                             'Time-keeping',
                                             'Multitasking',
@@ -185,7 +186,7 @@ export default function AboutMePage() {
                                         ].map((s) => (
                                             <span
                                                 key={s}
-                                                className="bg-white text-rose-700 px-3 py-1 rounded-full ring-2 ring-white ring-offset-2 ring-offset-rose-300"
+                                                className="bg-white text-rose-700 px-3 py-1 m-0.5 rounded-full ring-2 ring-white ring-offset-2 ring-offset-rose-300"
                                             >
                                                 {s}
                                             </span>

@@ -1,5 +1,6 @@
 'use client';
 
+import Link from "next/link";
 import Image from 'next/image';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -150,12 +151,12 @@ export default function AboutMePage() {
                                     <h6 className="font-semibold text-rose-300 mb-2">Education</h6>
                                     <ul className="list-disc list-outside space-y-2 pl-6 text-gray-500">
                                         <li>
-                                            Code Institute — Full Stack Software Development (Advanced Front End), Apr 2024 – Apr 2025.
+                                            Full Stack Software Development, Advanced Front End, Apr 2024 – Apr 2025, Code Institute (<Link href="https://api.accredible.com/v1/auth/invite?code=5a97c72029af66f61277&credential_id=a930bd8e-6681-4bbf-a5ef-f6b565007e45&url=https%3A%2F%2Fwww.credential.net%2Fa930bd8e-6681-4bbf-a5ef-f6b565007e45&ident=eca3c799-98aa-44a3-9b51-8d9e4c3b8658" target="_blank" rel="noopener noreferrer" className="hover:underline">View Certificate</Link>)
                                         </li>
                                         <li className="hover:underline">
-                                            <a href="https://www.trinitycollege.com/qualifications/teaching-english/CertTESOL" target="_blank" rel="noopener noreferrer">
+                                            <Link href="https://www.trinitycollege.com/qualifications/teaching-english/CertTESOL" target="_blank" rel="noopener noreferrer">
                                                 TrinityCert TESOL (Level 5), 2020
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
                                             BA Creative &amp; Cultural Industries; BA Photography (TU Dublin).

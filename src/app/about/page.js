@@ -116,131 +116,101 @@ export default function AboutMePage() {
                         </button>
 
                         <div
-                            className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? 'max-h-[2500px] opacity-100 mt-4' : 'max-h-0 opacity-0'
-                                }`}
+                            className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                                open ? 'max-h-[2500px] opacity-100 mt-4' : 'max-h-0 opacity-0'
+                            }`}
                         >
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                                {/* LEFT COLUMN — Experience */}
-                                <div>
-                                    <div className="border-t border-rose-200 pt-4 mt-2">
-                                        <h6 className="font-semibold text-rose-300 mb-2">Experience</h6>
-                                        <ul className="list-disc list-outside space-y-2 pl-6 text-gray-500">
-                                            <li>
-                                                <strong>Freelance Full Stack Developer</strong> — project planning &amp; execution,
-                                                project management, stakeholder management, UI/UX design, front end development,
-                                                back end development. (April 2025 – present).
-                                            </li>
-                                            <li>
-                                                <strong>Swimming Teacher &amp; Front of House</strong> — lesson planning and delivery,
-                                                customer support, bookings, waiting-list management, and training new teachers (Mar 2023 – present).
-                                            </li>
-                                            <li>
-                                                <strong>ESL Teacher (EPIK, South Korea)</strong> — lesson design &amp; delivery; cross-cultural communication
-                                                (Feb 2021 – Feb 2023).
-                                            </li>
-                                            <li>
-                                                <strong>Lifeguard &amp; Swimming Teacher</strong> — progressed from in-water teacher to experienced instructor
-                                                (2014 – 2020).
-                                            </li>
-                                        </ul>
-                                    </div>
+                            <div className="flex flex-col gap-4">
+                                {/* Experience */}
+                                <div className="border-t border-rose-200 pt-4 mt-2">
+                                    <h6 className="font-semibold text-rose-300 mb-2">Experience</h6>
+                                    <ul className="list-disc list-outside space-y-2 pl-6 text-gray-500">
+                                        <li>
+                                            <strong>Freelance Full Stack Developer</strong> — project planning &amp; execution,
+                                            project management, stakeholder management, UI/UX design, front end development,
+                                            back end development. (April 2025 – present).
+                                        </li>
+                                        <li>
+                                            <strong>Swimming Teacher &amp; Front of House</strong> — lesson planning and delivery,
+                                            customer support, bookings, waiting-list management, and training new teachers (Mar 2023 – present).
+                                        </li>
+                                        <li>
+                                            <strong>ESL Teacher (EPIK, South Korea)</strong> — lesson design &amp; delivery; cross-cultural communication
+                                            (Feb 2021 – Feb 2023).
+                                        </li>
+                                        <li>
+                                            <strong>Lifeguard &amp; Swimming Teacher</strong> — progressed from in-water teacher to experienced instructor
+                                            (2014 – 2020).
+                                        </li>
+                                    </ul>
+                                </div>
 
-                                    {/* Technical Skills */}
-                                    <div className="border-t border-rose-200 pt-4 mt-6">
-                                        <h6 className="font-semibold text-rose-300 mb-2">Technical Skills</h6>
-                                        <div className="flex flex-wrap gap-2 text-sm">
-                                            {[
-                                                'HTML',
-                                                'CSS',
-                                                'JavaScript',
-                                                'Python',
-                                                'Django',
-                                                'Allauth',
-                                                'Tailwind CSS',
-                                                'Bootstrap',
-                                                'Flask',
-                                                'Next.js',
-                                                'Node.js',
-                                                'React.js',
-                                                'JQuery',
-                                                'AI Integration',
-                                                'Microsoft Suite',
-                                                'GitHub',
-                                                'Agile Methodologies',
-                                                'SQLite',
-                                                'PostGreSQL',
-                                                'Search Engine Optimization (SEO)',
-                                                'Adobe Lightroom',
-                                            ].map((s) => (
-                                                <span
-                                                    key={s}
-                                                    className="bg-white text-rose-700 px-3 py-1 m-0.5 rounded-full ring-2 ring-white ring-offset-2 ring-offset-rose-300"
-                                                >
-                                                    {s}
-                                                </span>
-                                            ))}
-                                        </div>
+                                {/* Education */}
+                                <div className="border-t border-rose-200 pt-4 mt-2">
+                                    <h6 className="font-semibold text-rose-300 mb-2">Education</h6>
+                                    <ul className="list-disc list-outside space-y-2 pl-6 text-gray-500">
+                                        <li>
+                                            Code Institute — Full Stack Software Development (Advanced Front End), Apr 2024 – Apr 2025.
+                                        </li>
+                                        <li className="hover:underline">
+                                            <a href="https://www.trinitycollege.com/qualifications/teaching-english/CertTESOL" target="_blank" rel="noopener noreferrer">
+                                                TrinityCert TESOL (Level 5), 2020
+                                            </a>
+                                        </li>
+                                        <li>
+                                            BA Creative &amp; Cultural Industries; BA Photography (TU Dublin).
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                {/* Certificates */}
+                                <div className="border-t border-rose-200 pt-4">
+                                    <h6 className="font-semibold text-rose-300 mb-2">Certificates</h6>
+                                    <ul className="list-disc list-outside space-y-2 pl-6 text-gray-500">
+                                        <li className="hover:underline">
+                                            <a href="https://www.trinitycollege.com/qualifications/teaching-english/CertTESOL" target="_blank" rel="noopener noreferrer">
+                                                TrinityCert TESOL (Level 5), 2020
+                                            </a>
+                                        </li>
+                                        <li>Level 1 &amp; Level 2 Swim Ireland-Accredited Teacher.</li>
+                                    </ul>
+                                </div>
+
+                                {/* Technical Skills */}
+                                <div className="border-t border-rose-200 pt-4">
+                                    <h6 className="font-semibold text-rose-300 mb-2">Technical Skills</h6>
+                                    <div className="flex flex-wrap gap-2 text-sm">
+                                        {[
+                                            'HTML','CSS','JavaScript','Python','Django','Allauth','Tailwind CSS','Bootstrap',
+                                            'Flask','Next.js','Node.js','React.js','JQuery','AI Integration','Microsoft Suite',
+                                            'GitHub','Agile Methodologies','SQLite','PostGreSQL','Search Engine Optimization (SEO)','Adobe Lightroom',
+                                        ].map((s) => (
+                                            <span
+                                                key={s}
+                                                className="bg-white text-rose-700 px-3 py-1 m-0.5 rounded-full ring-2 ring-white ring-offset-2 ring-offset-rose-300"
+                                            >
+                                                {s}
+                                            </span>
+                                        ))}
                                     </div>
                                 </div>
 
-                                {/* RIGHT COLUMN — Education */}
-                                <div>
-                                    <div className="border-t border-rose-200 pt-4 mt-2">
-                                        <h6 className="font-semibold text-rose-300 mb-2">Education</h6>
-                                        <ul className="list-disc list-outside space-y-2 pl-6 text-gray-500">
-                                            <li>
-                                                Code Institute — Full Stack Software Development (Advanced Front End), Apr 2024 – Apr 2025.
-                                            </li>
-                                            <li className="hover:underline">
-                                                <a href="https://www.trinitycollege.com/qualifications/teaching-english/CertTESOL" target="_blank" rel="noopener noreferrer">
-                                                    TrinityCert TESOL (Level 5), 2020
-                                                </a>
-                                            </li>
-                                            <li>
-                                                BA Creative &amp; Cultural Industries; BA Photography (TU Dublin).
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    {/* NEXT RIGHT — Certificates */}
-                                    <div className="border-t border-rose-200 pt-4 mt-6">
-                                        <h6 className="font-semibold text-rose-300 mb-2">Certificates</h6>
-                                        <ul className="list-disc list-outside space-y-2 pl-6 text-gray-500">
-                                            <li className="hover:underline">
-                                                <a href="https://www.trinitycollege.com/qualifications/teaching-english/CertTESOL" target="_blank" rel="noopener noreferrer">
-                                                    TrinityCert TESOL (Level 5), 2020
-                                                </a>
-                                            </li>
-                                            <li>Level 1 &amp; Level 2 Swim Ireland-Accredited Teacher.</li>
-                                        </ul>
-                                    </div>
-                                    {/* Soft Skills */}
-                                    <div className="border-t border-rose-200 pt-4 mt-6">
-                                        <h6 className="font-semibold text-rose-300 mb-2">Soft Skills</h6>
-                                        <div className="flex flex-wrap gap-2 text-sm">
-                                            {[
-                                                'Time-keeping',
-                                                'Clear communication',
-                                                'Multitasking',
-                                                'Team Management',
-                                                'Project Management',
-                                                'Stakeholder management',
-                                                'Cross-cultural collaboration',
-                                                'Adaptability',
-                                                'Quick problem solving',
-                                                'Creativity',
-                                                'Resilience & patience',
-                                                'Attention to detail',
-                                                'Customer-focused mindset',
-                                            ].map((s) => (
-                                                <span
-                                                    key={s}
-                                                    className="bg-white text-rose-700 px-3 py-1 m-0.5 rounded-full ring-2 ring-white ring-offset-2 ring-offset-rose-300"
-                                                >
-                                                    {s}
-                                                </span>
-                                            ))}
-                                        </div>
+                                {/* Soft Skills */}
+                                <div className="border-t border-rose-200 pt-4">
+                                    <h6 className="font-semibold text-rose-300 mb-2">Soft Skills</h6>
+                                    <div className="flex flex-wrap gap-2 text-sm">
+                                        {[
+                                            'Time-keeping','Clear communication','Multitasking','Team Management','Project Management',
+                                            'Stakeholder management','Cross-cultural collaboration','Adaptability','Quick problem solving',
+                                            'Creativity','Resilience & patience','Attention to detail','Customer-focused mindset',
+                                        ].map((s) => (
+                                            <span
+                                                key={s}
+                                                className="bg-white text-rose-700 px-3 py-1 m-0.5 rounded-full ring-2 ring-white ring-offset-2 ring-offset-rose-300"
+                                            >
+                                                {s}
+                                            </span>
+                                        ))}
                                     </div>
                                 </div>
                             </div>

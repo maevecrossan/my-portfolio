@@ -13,7 +13,7 @@ export default function AboutMePage() {
         <main className="flex flex-col items-center min-h-screen m-2">
             {/* Header card - flipped to white */}
             <div className="mx-auto px-4 ml-4 mr-4 mt-12 bg-white shadow-xl text-center rounded-xl ring-4 ring-white ring-offset-2 ring-offset-rose-300">
-                <h3 className="text-rose-400 mt-10 mb-6 text-3xl font-semibold font-dmserif">
+                <h3 className="text-rose-400 mt-10 mb-6 text-3xl font-semibold font-caprasimo">
                     About Me
                 </h3>
                 <p className="text-rose-400 mb-12 text-lg max-w-2xl mx-auto">
@@ -36,11 +36,11 @@ export default function AboutMePage() {
                                 height={220}
                                 className="rounded-full ring-4 ring-white ring-offset-2 ring-offset-rose-300 mb-6"
                             />
-                            <h4 className="text-rose-400 mb-2 text-2xl font-semibold font-dmserif text-center">
+                            <h4 className="text-rose-400 mb-2 text-3xl font-semibold font-caprasimo text-center">
                                 Maeve Crossan
                             </h4>
                             <h5 className="text-rose-400/80 mb-4 text-lg font-dmserif text-center">
-                                Full-Stack Developer, Front End Specialist
+                                Full-Stack Developer, Front End Enthusiast
                             </h5>
 
                             <div className="text-sm text-rose-300 text-center space-y-2">
@@ -67,7 +67,7 @@ export default function AboutMePage() {
 
                         {/* RIGHT: bio */}
                         <div className="m-2 md:m-6 text-md">
-                            <h6 className="font-semibold text-rose-300 mb-2 mt-2">My Story</h6>
+                            <h6 className="font-semibold font-dmserif text-rose-300 mb-2 text-xl">My Story</h6>
                             <p className="mb-4 text-gray-500">
                                 I come from a people-first background: teaching swimming across
                                 all levels, training new instructors, and handling front-of-house
@@ -124,7 +124,7 @@ export default function AboutMePage() {
                             <div className="flex flex-col gap-4">
                                 {/* Experience */}
                                 <div className="border-t border-rose-200 pt-4 mt-2">
-                                    <h6 className="font-semibold text-rose-300 mb-2">Experience</h6>
+                                    <h6 className="font-semibold font-dmserif text-rose-300 mb-2 text-xl">Experience</h6>
                                     <ul className="list-disc list-outside space-y-2 pl-6 text-gray-500">
                                         <li>
                                             <strong>Freelance Full Stack Developer</strong> — project planning &amp; execution,
@@ -148,39 +148,37 @@ export default function AboutMePage() {
 
                                 {/* Education */}
                                 <div className="border-t border-rose-200 pt-4 mt-2">
-                                    <h6 className="font-semibold text-rose-300 mb-2">Education</h6>
+                                    <h6 className="font-semibold font-dmserif text-rose-300 mb-2 text-xl">Education</h6>
                                     <ul className="list-disc list-outside space-y-2 pl-6 text-gray-500">
                                         <li>
                                             Full Stack Software Development, Advanced Front End, Apr 2024 – Apr 2025, Code Institute (<Link href="https://api.accredible.com/v1/auth/invite?code=5a97c72029af66f61277&credential_id=a930bd8e-6681-4bbf-a5ef-f6b565007e45&url=https%3A%2F%2Fwww.credential.net%2Fa930bd8e-6681-4bbf-a5ef-f6b565007e45&ident=eca3c799-98aa-44a3-9b51-8d9e4c3b8658" target="_blank" rel="noopener noreferrer" className="hover:underline">View Certificate</Link>)
                                         </li>
-                                        <li className="hover:underline">
-                                            <Link href="https://www.trinitycollege.com/qualifications/teaching-english/CertTESOL" target="_blank" rel="noopener noreferrer">
-                                                TrinityCert TESOL (Level 5), 2020
-                                            </Link>
+                                        <li>
+                                            TrinityCert TESOL (Level 5), 2020
                                         </li>
                                         <li>
-                                            BA Creative &amp; Cultural Industries; BA Photography (TU Dublin).
+                                            BA Creative &amp; Cultural Industries; BA Photography (TU Dublin)
                                         </li>
                                     </ul>
                                 </div>
 
                                 {/* Certificates */}
                                 <div className="border-t border-rose-200 pt-4">
-                                    <h6 className="font-semibold text-rose-300 mb-2">Certificates</h6>
+                                    <h6 className="font-semibold font-dmserif text-rose-300 mb-2 text-xl">Certificates</h6>
                                     <ul className="list-disc list-outside space-y-2 pl-6 text-gray-500">
                                         <li className="hover:underline">
                                             <a href="https://www.trinitycollege.com/qualifications/teaching-english/CertTESOL" target="_blank" rel="noopener noreferrer">
                                                 TrinityCert TESOL (Level 5), 2020
                                             </a>
                                         </li>
-                                        <li>Level 1 &amp; Level 2 Swim Ireland-Accredited Teacher.</li>
+                                        <li>Level 2 Swim Ireland Accredited Teacher</li>
                                     </ul>
                                 </div>
 
                                 {/* Technical Skills */}
                                 <div className="border-t border-rose-200 pt-4">
-                                    <h6 className="font-semibold text-rose-300 mb-2">Technical Skills</h6>
-                                    <div className="flex flex-wrap gap-2 text-sm">
+                                    <h6 className="font-semibold font-dmserif text-rose-300 mb-2 text-xl">Technical Skills</h6>
+                                    <div className="flex flex-wrap gap-2 text-sm ml-0.5">
                                         {[
                                             'HTML','CSS','JavaScript','Python','Django','Allauth','Tailwind CSS','Bootstrap',
                                             'Flask','Next.js','Node.js','React.js','JQuery','AI Integration','Microsoft Suite',
@@ -198,8 +196,8 @@ export default function AboutMePage() {
 
                                 {/* Soft Skills */}
                                 <div className="border-t border-rose-200 pt-4">
-                                    <h6 className="font-semibold text-rose-300 mb-2">Soft Skills</h6>
-                                    <div className="flex flex-wrap gap-2 text-sm">
+                                    <h6 className="font-semibold font-dmserif text-rose-300 mb-2 text-xl">Soft Skills</h6>
+                                    <div className="flex flex-wrap gap-2 text-sm ml-0.5">
                                         {[
                                             'Time-keeping','Clear communication','Multitasking','Team Management','Project Management',
                                             'Stakeholder management','Cross-cultural collaboration','Adaptability','Quick problem solving',

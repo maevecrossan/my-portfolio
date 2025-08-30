@@ -67,7 +67,7 @@ export default function AboutMePage() {
 
                         {/* RIGHT: bio */}
                         <div className="m-2 md:m-6 text-md">
-                            <h6 className="font-semibold font-dmserif text-rose-300 mb-2 text-xl">My Story</h6>
+                            <h6 className="font-semibold font-dmserif text-rose-300 mb-2 text-2xl">A Little About Me</h6>
                             <p className="mb-4 text-gray-500">
                                 I come from a people-first background: teaching swimming across
                                 all levels, training new instructors, and handling front-of-house

@@ -99,7 +99,10 @@ export default function AboutMePage() {
                                 game, and a retro puzzle game — all designed with responsiveness
                                 and accessibility in mind.
                             </p>
+                            <p className="mb-4 text-gray-500">Want to know more about my work? Check out my <a href="/previous-work" className="font-semibold hover:underline">previous projects</a>, or <a href="/contact" className="font-semibold hover:underline">get in touch</a>!
+                            </p>
                         </div>
+
                     </div>
 
                     {/* Full-width accordion (spans entire pink box) */}
@@ -117,9 +120,8 @@ export default function AboutMePage() {
                         </button>
 
                         <div
-                            className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                                open ? 'max-h-[2500px] opacity-100 mt-4' : 'max-h-0 opacity-0'
-                            }`}
+                            className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? 'max-h-[2500px] opacity-100 mt-4' : 'max-h-0 opacity-0'
+                                }`}
                         >
                             <div className="flex flex-col gap-4">
                                 {/* Experience */}
@@ -180,9 +182,9 @@ export default function AboutMePage() {
                                     <h6 className="font-semibold font-dmserif text-rose-300 mb-2 text-xl">Technical Skills</h6>
                                     <div className="flex flex-wrap gap-2 text-sm ml-0.5">
                                         {[
-                                            'HTML','CSS','JavaScript','Python','Django','Allauth','Tailwind CSS','Bootstrap',
-                                            'Flask','Next.js','Node.js','React.js','JQuery','AI Integration','Microsoft Suite',
-                                            'GitHub','Agile Methodologies','SQLite','PostGreSQL','Search Engine Optimization (SEO)','Adobe Lightroom',
+                                            'HTML', 'CSS', 'JavaScript', 'Python', 'Django', 'Allauth', 'Tailwind CSS', 'Bootstrap',
+                                            'Flask', 'Next.js', 'Node.js', 'React.js', 'JQuery', 'AI Integration', 'Microsoft Suite',
+                                            'GitHub', 'Agile Methodologies', 'SQLite', 'PostGreSQL', 'Search Engine Optimization (SEO)', 'Adobe Lightroom',
                                         ].map((s) => (
                                             <span
                                                 key={s}
@@ -199,9 +201,9 @@ export default function AboutMePage() {
                                     <h6 className="font-semibold font-dmserif text-rose-300 mb-2 text-xl">Soft Skills</h6>
                                     <div className="flex flex-wrap gap-2 text-sm ml-0.5">
                                         {[
-                                            'Time-keeping','Clear communication','Multitasking','Team Management','Project Management',
-                                            'Stakeholder management','Cross-cultural collaboration','Adaptability','Quick problem solving',
-                                            'Creativity','Resilience & patience','Attention to detail','Customer-focused mindset',
+                                            'Time-keeping', 'Clear communication', 'Multitasking', 'Team Management', 'Project Management',
+                                            'Stakeholder management', 'Cross-cultural collaboration', 'Adaptability', 'Quick problem solving',
+                                            'Creativity', 'Resilience & patience', 'Attention to detail', 'Customer-focused mindset',
                                         ].map((s) => (
                                             <span
                                                 key={s}

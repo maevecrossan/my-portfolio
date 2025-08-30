@@ -98,113 +98,150 @@ export default function AboutMePage() {
                                 game, and a retro puzzle game — all designed with responsiveness
                                 and accessibility in mind.
                             </p>
+                        </div>
+                    </div>
 
-                            {/* accordion */}
-                            <button
-                                onClick={() => setOpen((o) => !o)}
-                                className="btn bg-white hover:bg-gray-100 text-rose-900 text-md rounded-xl mt-5 flex items-center justify-center px-4 py-2 transition-all duration-200"
-                            >
-                                {open ? 'Hide Details' : 'View Details'}
-                                <FontAwesomeIcon
-                                    icon={faCaretDown}
-                                    className={`ml-2 transition-transform duration-200 ${open ? 'rotate-180' : ''
-                                        }`}
-                                    style={{ fontSize: '1rem' }}
-                                />
-                            </button>
+                    {/* Full-width accordion (spans entire pink box) */}
+                    <div className="mt-2 md:mt-4">
+                        <button
+                            onClick={() => setOpen((o) => !o)}
+                            className="btn bg-white hover:bg-gray-100 text-rose-900 text-md rounded-xl flex items-center justify-center px-4 py-2 transition-all duration-200 mx-auto"
+                        >
+                            {open ? 'Hide Details' : 'View Details'}
+                            <FontAwesomeIcon
+                                icon={faCaretDown}
+                                className={`ml-2 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+                                style={{ fontSize: '1rem' }}
+                            />
+                        </button>
 
-                            <div
-                                className={`overflow-hidden transition-all duration-300 ease-in-out ${open
-                                        ? 'max-h-[1000px] opacity-100 mt-4'
-                                        : 'max-h-0 opacity-0'
-                                    }`}
-                            >
-                                {/* Experience snapshot */}
-                                <div className="border-t border-rose-200 pt-4 mt-2">
-                                    <h6 className="font-semibold text-rose-300 mb-2">Experience</h6>
-                                    <ul className="list-disc list-outside space-y-2 pl-6 text-gray-500">
-                                        <li>
-                                            <strong>Freelance Full Stack Developer</strong> —
-                                            project planning & execution, project management, stakeholder management,
-                                            UI/UX design, front end development, back end development. (April 2025 – present).
-                                        </li>
-                                        <li>
-                                            <strong>Swimming Teacher &amp; Front of House</strong> —
-                                            lesson planning and delivery, customer support, bookings, waiting-list management, and
-                                            training new teachers (Mar 2023 – present).
-                                        </li>
-                                        <li>
-                                            <strong>ESL Teacher (EPIK, South Korea)</strong> —
-                                            lesson design &amp; delivery; cross-cultural communication
-                                            (Feb 2021 – Feb 2023).
-                                        </li>
-                                        <li>
-                                            <strong>Lifeguard &amp; Swimming Teacher</strong> —
-                                            progressed from in-water teacher to experienced instructor
-                                            (2014 – 2020).
-                                        </li>
-                                    </ul>
-                                </div>
+                        <div
+                            className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? 'max-h-[2500px] opacity-100 mt-4' : 'max-h-0 opacity-0'
+                                }`}
+                        >
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                {/* LEFT COLUMN — Experience */}
+                                <div>
+                                    <div className="border-t border-rose-200 pt-4 mt-2">
+                                        <h6 className="font-semibold text-rose-300 mb-2">Experience</h6>
+                                        <ul className="list-disc list-outside space-y-2 pl-6 text-gray-500">
+                                            <li>
+                                                <strong>Freelance Full Stack Developer</strong> — project planning &amp; execution,
+                                                project management, stakeholder management, UI/UX design, front end development,
+                                                back end development. (April 2025 – present).
+                                            </li>
+                                            <li>
+                                                <strong>Swimming Teacher &amp; Front of House</strong> — lesson planning and delivery,
+                                                customer support, bookings, waiting-list management, and training new teachers (Mar 2023 – present).
+                                            </li>
+                                            <li>
+                                                <strong>ESL Teacher (EPIK, South Korea)</strong> — lesson design &amp; delivery; cross-cultural communication
+                                                (Feb 2021 – Feb 2023).
+                                            </li>
+                                            <li>
+                                                <strong>Lifeguard &amp; Swimming Teacher</strong> — progressed from in-water teacher to experienced instructor
+                                                (2014 – 2020).
+                                            </li>
+                                        </ul>
+                                    </div>
 
-                                {/* Education */}
-                                <div className="border-t border-rose-200 pt-4 mt-4">
-                                    <h6 className="font-semibold text-rose-300 mb-2">Education</h6>
-                                    <ul className="list-disc list-outside space-y-2 pl-6 text-gray-500">
-                                        <li>
-                                            Code Institute — Full Stack Software Development (Advanced Front End),
-                                            Apr 2024 – Apr 2025.
-                                        </li>
-                                        <li className='hover:underline'>
-                                            <a href="https://www.trinitycollege.com/qualifications/teaching-english/CertTESOL" target="_blank" rel="noopener noreferrer">TrinityCert TESOL (Level 5), 2020</a></li>
-                                        <li>
-                                            BA Creative &amp; Cultural Industries; BA Photography (TU
-                                            Dublin).
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                {/* Skills */}
-                                <div className="border-t border-rose-200 pt-4 mt-4">
-                                    <h6 className="font-semibold text-rose-300 mb-2">Skills</h6>
-                                    <div className="flex flex-wrap gap-2 text-sm">
-                                        {[
-                                            'HTML',
-                                            'CSS',
-                                            'JavaScript',
-                                            'Python',
-                                            'Django',
-                                            'Allauth',
-                                            'Tailwind CSS',
-                                            'Next.js',
-                                            'Node.js',
-                                            'AI Integration',
-                                            'Microsoft Suite',
-                                            'Time-keeping',
-                                            'Multitasking',
-                                            'Team Management',
-                                            'Basic Korean',
-                                        ].map((s) => (
-                                            <span
-                                                key={s}
-                                                className="bg-white text-rose-700 px-3 py-1 m-0.5 rounded-full ring-2 ring-white ring-offset-2 ring-offset-rose-300"
-                                            >
-                                                {s}
-                                            </span>
-                                        ))}
+                                    {/* Technical Skills */}
+                                    <div className="border-t border-rose-200 pt-4 mt-6">
+                                        <h6 className="font-semibold text-rose-300 mb-2">Technical Skills</h6>
+                                        <div className="flex flex-wrap gap-2 text-sm">
+                                            {[
+                                                'HTML',
+                                                'CSS',
+                                                'JavaScript',
+                                                'Python',
+                                                'Django',
+                                                'Allauth',
+                                                'Tailwind CSS',
+                                                'Bootstrap',
+                                                'Flask',
+                                                'Next.js',
+                                                'Node.js',
+                                                'React.js',
+                                                'JQuery',
+                                                'AI Integration',
+                                                'Microsoft Suite',
+                                                'GitHub',
+                                                'Agile Methodologies',
+                                                'SQLite',
+                                                'PostGreSQL',
+                                                'Search Engine Optimization (SEO)',
+                                                'Adobe Lightroom',
+                                            ].map((s) => (
+                                                <span
+                                                    key={s}
+                                                    className="bg-white text-rose-700 px-3 py-1 m-0.5 rounded-full ring-2 ring-white ring-offset-2 ring-offset-rose-300"
+                                                >
+                                                    {s}
+                                                </span>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
 
-                                {/* Qualifications */}
-                                <div className="border-t border-rose-200 pt-4 mt-4">
-                                    <h6 className="font-semibold text-rose-300 mb-2">
-                                        Certificates
-                                    </h6>
-                                    <ul className="list-disc list-outside space-y-2 pl-6 text-gray-500">
-                                        <li className='hover:underline'>
-                                            <a href="https://www.trinitycollege.com/qualifications/teaching-english/CertTESOL" target="_blank" rel="noopener noreferrer">TrinityCert TESOL (Level 5), 2020</a>
-                                        </li>
-                                        <li>Level 1 &amp; Level 2 Swim Ireland-Accredited Teacher.</li>
-                                    </ul>
+                                {/* RIGHT COLUMN — Education */}
+                                <div>
+                                    <div className="border-t border-rose-200 pt-4 mt-2">
+                                        <h6 className="font-semibold text-rose-300 mb-2">Education</h6>
+                                        <ul className="list-disc list-outside space-y-2 pl-6 text-gray-500">
+                                            <li>
+                                                Code Institute — Full Stack Software Development (Advanced Front End), Apr 2024 – Apr 2025.
+                                            </li>
+                                            <li className="hover:underline">
+                                                <a href="https://www.trinitycollege.com/qualifications/teaching-english/CertTESOL" target="_blank" rel="noopener noreferrer">
+                                                    TrinityCert TESOL (Level 5), 2020
+                                                </a>
+                                            </li>
+                                            <li>
+                                                BA Creative &amp; Cultural Industries; BA Photography (TU Dublin).
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    {/* NEXT RIGHT — Certificates */}
+                                    <div className="border-t border-rose-200 pt-4 mt-6">
+                                        <h6 className="font-semibold text-rose-300 mb-2">Certificates</h6>
+                                        <ul className="list-disc list-outside space-y-2 pl-6 text-gray-500">
+                                            <li className="hover:underline">
+                                                <a href="https://www.trinitycollege.com/qualifications/teaching-english/CertTESOL" target="_blank" rel="noopener noreferrer">
+                                                    TrinityCert TESOL (Level 5), 2020
+                                                </a>
+                                            </li>
+                                            <li>Level 1 &amp; Level 2 Swim Ireland-Accredited Teacher.</li>
+                                        </ul>
+                                    </div>
+                                    {/* Soft Skills */}
+                                    <div className="border-t border-rose-200 pt-4 mt-6">
+                                        <h6 className="font-semibold text-rose-300 mb-2">Soft Skills</h6>
+                                        <div className="flex flex-wrap gap-2 text-sm">
+                                            {[
+                                                'Time-keeping',
+                                                'Clear communication',
+                                                'Multitasking',
+                                                'Team Management',
+                                                'Project Management',
+                                                'Stakeholder management',
+                                                'Cross-cultural collaboration',
+                                                'Adaptability',
+                                                'Quick problem solving',
+                                                'Creativity',
+                                                'Resilience & patience',
+                                                'Attention to detail',
+                                                'Customer-focused mindset',
+                                            ].map((s) => (
+                                                <span
+                                                    key={s}
+                                                    className="bg-white text-rose-700 px-3 py-1 m-0.5 rounded-full ring-2 ring-white ring-offset-2 ring-offset-rose-300"
+                                                >
+                                                    {s}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -44,7 +44,7 @@ export default function PreviousWorkPage() {
                                     <span>Role: </span>Front End Developer, UI/UX Consultant
                                 </h5>
                                 <div className="flex justify-center mb-4">
-                                    <img
+                                    <Image
                                         src="/images/laluna-screenshot.png"
                                         alt="Project 1 screenshot"
                                         width={800}
@@ -173,7 +173,7 @@ export default function PreviousWorkPage() {
                                     <span>Role: </span>Lead Developer
                                 </h5>
                                 <div className="flex justify-center mb-4">
-                                    <img
+                                    <Image
                                         src="/images/nomad-screenshot.png"
                                         alt="Project 2 screenshot"
                                         width={800}
@@ -302,7 +302,7 @@ export default function PreviousWorkPage() {
                                     <span>Role: </span>Lead Developer
                                 </h5>
                                 <div className="flex justify-center mb-4">
-                                    <img
+                                    <Image
                                         src="/images/laluna-screenshot.png"
                                         alt="Project 3 screenshot"
                                         width={800}
@@ -420,7 +420,7 @@ export default function PreviousWorkPage() {
                                     <span>Role: </span>Lead Developer
                                 </h5>
                                 <div className="flex justify-center mb-4">
-                                    <img
+                                    <Image
                                         src="/images/echoes-screenshot.png"
                                         alt="Project 4 screenshot"
                                         width={800}
@@ -537,7 +537,7 @@ export default function PreviousWorkPage() {
                                     <span>Role: </span>Lead Developer
                                 </h5>
                                 <div className="flex justify-center mb-4">
-                                    <img
+                                    <Image
                                         src="/images/byte-screenshot.png"
                                         alt="Project 5 screenshot"
                                         width={800}
@@ -649,7 +649,7 @@ export default function PreviousWorkPage() {
                                     <span>Role: </span>Lead Developer
                                 </h5>
                                 <div className="flex justify-center mb-4">
-                                    <img
+                                    <Image
                                         src="/images/peaceful-screenshot.png"
                                         alt="Project 6 screenshot"
                                         width={800}

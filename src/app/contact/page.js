@@ -8,7 +8,7 @@ export default function ContactPage() {
   return (
     <main className="flex flex-col items-center min-h-screen m-2">
       {/* Header card */}
-      <div className="mx-auto px-4 ml-4 mr-4 mt-12 bg-rose-300 shadow-xl text-center rounded-xl ring-4 ring-rose-300 ring-offset-2 ring-offset-white">
+      <div className="mx-auto px-4 ml-4 mr-4 mt-12 bg-rose-300 shadow-xl text-center rounded-xl ring-4 ring-rose-300 ring-offset-2 ring-offset-white animate-drop-in" style={{ ['--delay']: '0ms' }}>
         <h3 className="text-white mt-10 mb-6 text-3xl font-semibold font-dmserif">
           Get in Touch
         </h3>
@@ -18,7 +18,7 @@ export default function ContactPage() {
       </div>
 
       {/* Contact card */}
-      <div className="w-full max-w-screen-xl py-10 px-4">
+      <div className="w-full max-w-screen-xl py-10 px-4 animate-drop-in" style={{ ['--delay']: '140ms' }}>
         <div className="w-full rounded-3xl p-8 md:p-10 bg-white backdrop-blur-xl shadow-xl text-zinc-800 mt-10 ring-4 ring-rose-300 ring-offset-2 ring-offset-white">
           {/* Two-column on lg+, stacked on sm/md */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">

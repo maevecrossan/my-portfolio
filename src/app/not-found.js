@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <main className="flex flex-col items-center min-h-screen m-6">
-      <div className="mx-auto px-6 py-10 mt-10 bg-white shadow-xl text-center rounded-xl ring-4 ring-white ring-offset-2 ring-offset-rose-300">
+      <div className="mx-auto px-6 py-10 mt-10 bg-white shadow-xl text-center rounded-xl ring-4 ring-white ring-offset-2 ring-offset-rose-300 animate-drop-in" style={{ ['--delay']: '0ms' }}>
         <h1 className="text-rose-400 text-3xl font-semibold font-dmserif mb-4">
           404 — Page Not Found
         </h1>
@@ -20,4 +20,3 @@ export default function NotFound() {
     </main>
   );
 }
-

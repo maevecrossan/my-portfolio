@@ -20,7 +20,7 @@ export default function AboutMePage() {
     return (
         <main className="flex flex-col items-center min-h-screen m-2">
             {/* Header card - flipped to white */}
-            <div className="mx-auto px-4 ml-4 mr-4 mt-12 bg-white shadow-xl text-center rounded-xl ring-4 ring-white ring-offset-2 ring-offset-rose-300">
+            <div className="mx-auto px-4 ml-4 mr-4 mt-12 bg-white shadow-xl text-center rounded-xl ring-4 ring-white ring-offset-2 ring-offset-rose-300 animate-drop-in" style={{ ['--delay']: '0ms' }}>
                 <h3 className="text-rose-400 mt-10 mb-6 text-3xl font-semibold font-caprasimo">
                     About Me
                 </h3>
@@ -33,7 +33,7 @@ export default function AboutMePage() {
 
             {/* Main content - flipped to rose */}
             <div className="w-full max-w-screen-xl py-10 px-4">
-                <div className="w-full rounded-3xl p-8 md:p-10 bg-rose-100 backdrop-blur-xl shadow-xl text-white mt-10 ring-4 ring-white ring-offset-2 ring-offset-rose-300">
+                <div className="w-full rounded-3xl p-8 md:p-10 bg-rose-100 backdrop-blur-xl shadow-xl text-white mt-10 ring-4 ring-white ring-offset-2 ring-offset-rose-300 animate-drop-in" style={{ ['--delay']: '140ms' }}>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
                         {/* LEFT: photo + quick facts */}
                         <div className="flex flex-col items-center">

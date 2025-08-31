@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from 'next/image';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown, faLocationDot, faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 export default function AboutMePage() {
     const [open, setOpen] = useState(false);
@@ -63,7 +63,9 @@ export default function AboutMePage() {
                                     (Apr 2024 – Apr 2025)
                                 </p>
                                 <p>
-                                    <a href="/path/to/cv.pdf" className="font-semibold hover:underline" target="_blank" rel="noopener noreferrer">Download CV
+                                    <a href="/path/to/cv.pdf" className="font-semibold hover:underline" target="_blank" rel="noopener noreferrer">
+                                        <FontAwesomeIcon icon={faFileArrowDown} className="mr-1 text-rose-300" />
+                                        Download CV
                                     </a>
                                 </p>
                             </div>

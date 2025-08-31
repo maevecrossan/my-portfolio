@@ -81,7 +81,7 @@ export default function AboutClient() {
                       <FontAwesomeIcon icon={faLinkedin} /> linkedin.com/in/maeve-crossan/
                     </a>
                     <a
-                      href="https://maevecrossan.dev"
+                      href="https://maevecrossan.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 font-medium hover:underline"

@@ -17,7 +17,7 @@ export default function PreviousWorkPage() {
     };
 
     return (
-        <main className="flex flex-col items-center min-h-screen m-2">
+        <main className="flex flex-col items-center min-h-screen m-2 text-zinc-800">
             <div className="mx-auto px-4 ml-4 mr-4 mt-12 bg-rose-300 shadow-xl text-center rounded-xl ring-4 ring-rose-300 ring-offset-2 ring-offset-white">
                 <h3 className="text-white mt-10 mb-6 text-3xl font-semibold font-dmserif">
                     Previous Work
@@ -31,7 +31,7 @@ export default function PreviousWorkPage() {
 
             <div className='gap-8 w-full max-w-screen-xl py-10 px-4'>
                 {/* ------------------------------------------------- Project Card #1 */}
-                <div className="w-full rounded-3xl p-8 md:p-10 bg-white backdrop-blur-xl shadow-xl text-zinc-800 mt-10 ring-4 ring-rose-300 ring-offset-2 ring-offset-white">
+                <div className="w-full rounded-3xl p-8 md:p-10 bg-white backdrop-blur-xl shadow-xl mt-10 ring-4 ring-rose-300 ring-offset-2 ring-offset-white">
                     {/* Two-column on lg+, stacked on sm/md */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
                         {/* LEFT: Title/Role/Image */}
@@ -162,7 +162,7 @@ export default function PreviousWorkPage() {
 
 
                 {/* ------------------------------------------------- Project Card #2 */}
-                <div className="w-full rounded-3xl p-8 md:p-10 bg-white backdrop-blur-xl w-full rounded-3xl p-8 md:p-10 bg-white backdrop-blur-xl shadow-xl text-zinc-800 mt-10 ring-4 ring-rose-300 ring-offset-2 ring-offset-white">
+                <div className="w-full rounded-3xl p-8 md:p-10 bg-white backdrop-blur-xl shadow-xl mt-10 ring-4 ring-rose-300 ring-offset-2 ring-offset-white">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
                         <div>
                             <div className="border-b border-zinc-400/50 pb-4 mb-4">
@@ -291,7 +291,7 @@ export default function PreviousWorkPage() {
 
 
                 {/* ------------------------------------------------- Project Card #3 */}
-                <div className="w-full rounded-3xl p-8 md:p-10 bg-white backdrop-blur-xl w-full rounded-3xl p-8 md:p-10 bg-white backdrop-blur-xl shadow-xl text-zinc-800 mt-10 ring-4 ring-rose-300 ring-offset-2 ring-offset-white">
+                <div className="w-full rounded-3xl p-8 md:p-10 bg-white backdrop-blur-xl w-full rounded-3xl p-8 md:p-10 bg-white backdrop-blur-xl shadow-xl mt-10 ring-4 ring-rose-300 ring-offset-2 ring-offset-white">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
                         <div>
                             <div className="border-b border-zinc-400/50 pb-4 mb-4">
@@ -409,7 +409,7 @@ export default function PreviousWorkPage() {
                 </div>
 
                 {/* ------------------------------------------------- Project Card #4 */}
-                <div className="w-full rounded-3xl p-8 md:p-10 bg-white backdrop-blur-xl w-full rounded-3xl p-8 md:p-10 bg-white backdrop-blur-xl shadow-xl text-zinc-800 mt-10 ring-4 ring-rose-300 ring-offset-2 ring-offset-white">
+                <div className="w-full rounded-3xl p-8 md:p-10 bg-white backdrop-blur-xl w-full rounded-3xl p-8 md:p-10 bg-white backdrop-blur-xl shadow-xl mt-10 ring-4 ring-rose-300 ring-offset-2 ring-offset-white">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
                         <div>
                             <div className="border-b border-zinc-400/50 pb-4 mb-4">

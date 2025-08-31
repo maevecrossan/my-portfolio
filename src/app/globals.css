@@ -18,6 +18,11 @@ body {
     font-family: var(--font-caprasimo), serif;
 }
 
+/* Apply Caprasimo to all heading levels */
+:is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--font-caprasimo), serif;
+}
+
 /* Drop-in animation for initial page load */
 @keyframes drop-in {
     0% {

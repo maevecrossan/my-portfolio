@@ -62,10 +62,6 @@ export default function AboutMePage() {
                                         <FontAwesomeIcon icon={faEnvelope} />
                                         <span>maevecrossan@gmail.com</span>
                                     </a>
-                                    <a href="tel:0894834965" className="inline-flex items-center gap-2 font-medium hover:underline">
-                                        <FontAwesomeIcon icon={faPhone} />
-                                        <span>089 483 4965</span>
-                                    </a>
                                     <div className="flex flex-wrap items-center justify-center gap-3">
                                         <a
                                             href="https://github.com/maevecrossan"

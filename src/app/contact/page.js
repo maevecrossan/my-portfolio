@@ -39,13 +39,6 @@ export default function ContactPage() {
               </div>
 
               <div className="grid gap-3 text-rose-400">
-                <a
-                  href="mailto:maevecrossan@gmail.com"
-                  className="w-fit inline-flex items-center gap-2 px-3 py-2 rounded-xl ring-2 ring-rose-300 ring-offset-2 ring-offset-white hover:bg-rose-50 transition"
-                >
-                  <FontAwesomeIcon icon={faEnvelope} className="text-rose-400" />
-                  <span className="font-medium">maevecrossan@gmail.com</span>
-                </a>
 
                 <div className="flex items-center gap-3">
                   <a

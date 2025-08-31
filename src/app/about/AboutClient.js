@@ -63,13 +63,6 @@ export default function AboutClient() {
                 </p>
                 {/* Contact */}
                 <div className="flex flex-col items-center gap-1">
-                  <a
-                    href="mailto:maevecrossan@gmail.com"
-                    className="inline-flex items-center gap-2 font-medium hover:underline"
-                  >
-                    <FontAwesomeIcon icon={faEnvelope} />
-                    <span>maevecrossan@gmail.com</span>
-                  </a>
                   <div className="flex flex-wrap items-center justify-center gap-3">
                     <a
                       href="https://github.com/maevecrossan"
@@ -93,7 +86,7 @@ export default function AboutClient() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 font-medium hover:underline"
                     >
-                      <FontAwesomeIcon icon={faGlobe} /> maevecrossan.dev
+                      <FontAwesomeIcon icon={faGlobe} /> maevecrossan.com
                     </a>
                   </div>
                 </div>

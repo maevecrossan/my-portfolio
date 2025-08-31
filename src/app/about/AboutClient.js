@@ -108,13 +108,12 @@ export default function AboutClient() {
                 </p>
                 <p>
                   <a
-                    href="/cv.pdf"
+                    href="/maevecrossan.pdf"
                     className="font-semibold hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    download="maevecrossan.pdf"
                   >
                     <FontAwesomeIcon icon={faFileArrowDown} className="mr-1 text-rose-300" />
-                    Download CV
+                    Download CV <span className="text-xs italic">(download will begin immediately)</span>
                   </a>
                 </p>
               </div>
@@ -376,4 +375,3 @@ export default function AboutClient() {
     </main>
   );
 }
-

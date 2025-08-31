@@ -8,7 +8,7 @@ export default function NotFound() {
           404 — Page Not Found
         </h1>
         <p className="text-zinc-600 text-lg max-w-xl">
-          Hmm... the  page you’re looking for doesn’t exist or has moved.
+          Hmm... the page you’re looking for doesn’t exist or has moved.
         </p>
         <Link
           href="/"

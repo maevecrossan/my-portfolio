@@ -92,7 +92,7 @@ export default function AboutClient() {
                 </div>
 
                 {/* Course blurb */}
-                <p className="max-w-xs mt-2">
+                <p className="max-w-xs mt-2 mx-auto">
                   <strong>Diploma in Full Stack Software Development (Advanced Front End)</strong>{' '}
                   with{' '}
                   <a

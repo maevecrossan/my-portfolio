@@ -318,9 +318,9 @@ export default function PreviousWorkClient() {
                   <h6 className="font-semibold text-rose-400 mb-2 mt-2">Project Description:</h6>
                   <p className="text-gray-500 mt-4 mb-4">
                     La Luna is a website for a fictional restaurant that allows users to browse the menu,
-                    make reservations, and learn about the restaurant's history. A sophisticated restaurant website featuring an elegant design that captures
+                    make reservations, and learn about the restaurant&apos;s history. A sophisticated restaurant website featuring an elegant design that captures
                     the ambiance of fine dining. The site includes interactive menu browsing, online reservation
-                    system, and rich storytelling about the restaurant's heritage and culinary philosophy.
+                    system, and rich storytelling about the restaurant&apos;s heritage and culinary philosophy.
                   </p>
                 </div>
               </div>
@@ -439,7 +439,7 @@ export default function PreviousWorkClient() {
                     building with a dark secret. You play as an urban explorer navigating through the eerie environment, making choices that
                     affect the outcome of the story. An immersive interactive narrative experience that combines atmospheric storytelling with decision-based gameplay.
                     Players navigate through a mysterious abandoned building, uncovering secrets while making choices that influence the
-                    story's direction and multiple possible endings.
+                    story&apos;s direction and multiple possible endings.
                   </p>
                 </div>
               </div>
@@ -667,7 +667,7 @@ export default function PreviousWorkClient() {
                     Peaceful Path is a landing page for a program designed to help users find inner peace and
                     relaxation through guided meditations and mindfulness exercises. A serene and calming landing page designed to promote mental wellness through meditation and
                     mindfulness practices. The design emphasizes tranquility and ease of use, encouraging visitors
-                    to explore the program's offerings and begin their journey toward inner peace.
+                    to explore the program&apos;s offerings and begin their journey toward inner peace.
                   </p>
                 </div>
               </div>

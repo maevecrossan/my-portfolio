@@ -58,7 +58,7 @@ export default function ContactPage() {
                     <span className="font-medium">GitHub</span>
                   </a>
                   <a
-                    href="https://www.linkedin.com/"
+                    href="https://www.linkedin.com/in/maeve-crossan/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-3 py-2 rounded-xl ring-2 ring-rose-300 ring-offset-2 ring-offset-white hover:bg-rose-50 transition"

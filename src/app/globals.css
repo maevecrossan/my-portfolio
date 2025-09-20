@@ -1,26 +1,30 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@theme {
+    --color-leaf: #67725c; /* sage green */
+    --color-heather: #7e6377; /* mauve */
+    --color-mulberry: #42303d; /* deep plum */
+    --color-evergreen: #363b2e; /* forest */
+    --color-moss: #779273; /* soft moss */
+}
+
 
 body {
-    font-family: var(--font-roboto), sans-serif;
+    font-family: var(--font-nunito), sans-serif;
 }
 
-.font-dmserif {
-    font-family: var(--font-dmserif), serif;
+.font-nunito {
+    font-family: var(--font-nunito), sans-serif;
 }
 
-.font-teko {
-    font-family: var(--font-teko), serif;
+.font-melodrama {
+    font-family: var(--font-melodrama), serif;
 }
 
-.font-caprasimo {
-    font-family: var(--font-caprasimo), serif;
-}
-
-/* Apply Caprasimo to all heading levels */
+/* Apply Melodrama to all heading levels */
 :is(h1, h2, h3, h4, h5, h6) {
-    font-family: var(--font-caprasimo), serif;
+    font-family: var(--font-melodrama), serif;
 }
 
 /* Drop-in animation for initial page load */

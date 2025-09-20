@@ -17,7 +17,7 @@
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(255 255 255 / 0.7);
-    color: #1f2937; /* gray-800 */
+    color: #363b2e; /* evergreen */
     border-radius: 9999px; /* rounded-full */
     padding: 0.75rem; /* p-3 */
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),

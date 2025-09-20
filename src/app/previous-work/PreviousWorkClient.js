@@ -18,9 +18,9 @@ export default function PreviousWorkClient() {
 
 
   return (
-    <main className="flex flex-col items-center min-h-screen m-2 text-zinc-800">
-      <div className="mx-auto px-4 ml-4 mr-4 mt-12 bg-rose-300 shadow-xl text-center rounded-xl ring-4 ring-rose-300 ring-offset-2 ring-offset-white animate-drop-in" style={{ ['--delay']: '0ms' }}>
-        <h3 className="text-white mt-10 mb-6 text-3xl font-semibold font-dmserif">
+    <main className="flex flex-col items-center min-h-screen m-2">
+      <div className="mx-auto px-10 ml-4 mr-4 mt-12 bg-heather shadow-xl text-center rounded-xl ring-2 ring-white ring-offset-4 ring-offset-mulberry animate-drop-in" style={{ ['--delay']: '0ms' }}>
+        <h3 className="text-white mt-10 mb-6 text-3xl font-semibold font-nunito">
           Previous Work
         </h3>
         <p className="text-white mb-12 text-lg">
@@ -31,26 +31,149 @@ export default function PreviousWorkClient() {
       {/* Projects ordered by date (recent -> oldest) */}
 
       <div className='gap-8 w-full max-w-screen-xl py-10 px-4 animate-drop-in' style={{ ['--delay']: '140ms' }}>
-        {/* ------------------------------------------------- Project Card #1 */}
-        <div className="w-full rounded-3xl p-8 md:p-10 bg-rose-50 backdrop-blur-xl shadow-xl mt-10 ring-4 ring-rose-300 ring-offset-2 ring-offset-white">
+        {/* ------------------------------------------------- Brandmark Project Card */}
+                <div className="w-full rounded-3xl p-8 md:p-10 bg-mulberry backdrop-blur-xl shadow-xl mt-10 ring-4 ring-leaf ring-offset-2 ring-offset-white mb-20">
           {/* Two-column on lg+, stacked on sm/md */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
             {/* LEFT: Title/Role/Image */}
             <div>
-              <div className="border-b border-zinc-400/50 pb-4 mb-4">
-                <h4 className="text-rose-400 mb-2 text-3xl font-semibold font-dmserif text-center">
+              <div className="border-b border-evergreen/40 pb-4 mb-4">
+                <h4 className="text-white mb-2 text-3xl font-semibold font-nunito text-center">
+                  Brandmark Agencies
+                </h4>
+                <h5 className="text-white/80 mb-8 text-md font-nunito text-center">
+                  <span>Role: </span> Sole Designer &amp; Developer
+                </h5>
+                <div>
+                  <Image
+                    src="/images/brandmark-screenshot.png"
+                    alt="Brandmark Agencies website screenshot"
+                    width={800}
+                    height={450}
+                    className="rounded-lg mt-4 ring-4 ring-moss"
+                  />
+                </div>
+                <div className="m-6 text-md">
+                  <h6 className="font-semibold text-lg text-white mb-2 mt-2">Project Description:</h6>
+                  <p className="text-white/80 mt-4 mb-4">
+                    Rebuilt the Brandmark Agencies marketing site on the Next.js App Router with a custom Tailwind design
+                    system, reusable brand pages, and storytelling that supports retailer outreach across Ireland.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT: Description + Details (visible on lg+) */}
+            <div className="hidden lg:block">
+              <div className="m-6 pt-4">
+                <div className="text-md">
+                  <h6 className="font-semibold text-white mb-2">Technology Used:</h6>
+                  <ul className="list-disc list-inside text-white/80">
+                    <li>Next.js 15 App Router</li>
+                    <li>React 19</li>
+                    <li>Tailwind CSS 4 with custom theme tokens</li>
+                    <li>Next/Image for optimised media</li>
+                    <li>Font Awesome 7 icon system</li>
+                  </ul>
+                  <div className="mt-4">
+                    <h6 className="font-semibold text-white mb-2">Key Features:</h6>
+                    <ul className="list-disc list-inside text-white/80">
+                      <li>Hero carousel showcasing brand imagery with accessible overlays</li>
+                      <li>Filterable brand portfolio with reusable detail pages</li>
+                      <li>Contact hub with spam-safe email/phone links and Google Maps embed</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Project Links */}
+          <div className="flex justify-center gap-4 mb-4">
+            <a
+              href="https://github.com/maevecrossan/brandmark-app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-leaf hover:bg-moss/80 border-2 border-leaf hover:border-white/80 text-white font-medium rounded-xl transition-colors duration-200"
+            >
+              <FontAwesomeIcon icon={faGithub} className="text-lg" />
+              <span>GitHub</span>
+            </a>
+            <a
+              href="https://www.brandmark.ie"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-heather hover:bg-heather/80 text-white border-2 border-heather hover:border-white/80 rounded-xl transition-colors duration-200"
+            >
+              <FontAwesomeIcon icon={faExternalLinkAlt} className="text-sm" />
+              <span>Live Site</span>
+            </a>
+          </div>
+
+          {/* Toggle + accordion (sm/md only) */}
+          <button
+            onClick={() => toggleProject('project1')}
+            className="btn bg-mulberry hover:bg-mulberry/90 text-white text-md rounded-xl mt-5 flex items-center justify-center mx-auto px-4 py-2 transition-all duration-200 lg:hidden"
+          >
+            {expandedProjects.project1 ? 'Hide Details' : 'View Details'}
+            <FontAwesomeIcon
+              icon={faCaretDown}
+              className={`ml-2 transition-transform duration-200 ${expandedProjects.project1 ? 'rotate-180' : ''}`}
+              style={{ fontSize: '1rem' }}
+            />
+          </button>
+
+          <div
+            className={`overflow-hidden transition-all duration-300 ease-in-out lg:hidden ${
+              expandedProjects.project1 ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
+            }`}
+          >
+            <div className="m-6 pt-4 border-t border-evergreen/30">
+              <div className="text-md">
+                <h6 className="font-semibold text-white mb-2">Technology Used:</h6>
+                <ul className="list-disc list-inside text-white/80">
+                  <li>Next.js 15 App Router</li>
+                  <li>React 19</li>
+                  <li>Tailwind CSS 4 with custom theme tokens</li>
+                  <li>Next/Image for optimised media</li>
+                  <li>Font Awesome 7 icon system</li>
+                </ul>
+                <div className="mt-4">
+                  <h6 className="font-semibold text-white mb-2">Key Features:</h6>
+                  <ul className="list-disc list-inside text-white/80">
+                    <li>Responsive layout tuned for mobile, tablet, and desktop</li>
+                    <li>Hero carousel of lifestyle imagery with gradient overlays</li>
+                    <li>Filterable portfolio and dedicated brand pages</li>
+                    <li>Case-study section covering Secrid retail installations</li>
+                    <li>Contact hub with obfuscated email/phone links and embedded Google Map</li>
+                    <li>PWA metadata and structured data for richer sharing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ------------------------------------------------- TCSP Project Card */}
+        <div className="w-full rounded-3xl p-8 md:p-10 bg-mulberry backdrop-blur-xl shadow-xl mt-10 ring-4 ring-leaf ring-offset-2 ring-offset-white mb-20">
+          {/* Two-column on lg+, stacked on sm/md */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+            {/* LEFT: Title/Role/Image */}
+            <div>
+              <div className="border-b border-evergreen/40 pb-4 mb-4">
+                <h4 className="text-white mb-2 text-3xl font-semibold font-nunito text-center">
                   Templeogue College Swim Pool - WIP
                 </h4>
-                <h5 className="text-rose-300 mb-2 text-lg font-dmserif text-center">
+                <h5 className="text-white/80 mb-8 text-md font-nunito text-center">
                   <span>Role: </span>Front End Developer, UI/UX Consultant
                 </h5>
-                <div className="flex justify-center items-center mb-4 p-20 ring-4 ring-rose-300 ring-offset-2 ring-offset-white rounded-xl bg-white text-rose-400">
+                <div className="flex justify-center items-center mb-4 p-20 ring-4 ring-moss rounded-xl bg-white/80 text-mulberry">
                   {/* <Image
                     src="/images/laluna-screenshot.png"
                     alt="Project 1 screenshot"
                     width={800}
                     height={450}
-                    className="rounded-xl mt-4 ring-3 ring-rose-300 ring-offset-2 ring-offset-white"
+                    className="rounded-lg mt-4 ring-4 ring-moss"
                   /> */}
                   <FontAwesomeIcon
                     icon={faHourglassHalf}
@@ -59,8 +182,8 @@ export default function PreviousWorkClient() {
                   Coming Soon...
                 </div>
                 <div className="m-6 text-md">
-                  <h6 className="font-semibold text-rose-400 mb-2 mt-2">Project Description:</h6>
-                  <p className="text-gray-500 mt-4 mb-4">
+                  <h6 className="font-semibold text-lg text-white mb-2 mt-2">Project Description:</h6>
+                  <p className="text-white/80 mt-4 mb-4">
                     This project was a redesign of the Templeogue College Swim Pool website to improve user experience and accessibility.
                     The redesign focused on creating a modern, accessible interface that would make it easier
                     for users to find information about swimming classes, pool schedules, and facility amenities.
@@ -74,8 +197,8 @@ export default function PreviousWorkClient() {
             <div className="hidden lg:block">
               <div className="m-6 pt-4">
                 <div className="text-md">
-                  <h6 className="font-semibold text-rose-400 mb-2">Technology Used:</h6>
-                  <ul className="list-disc list-inside text-gray-500">
+                  <h6 className="font-semibold text-white mb-2">Technology Used:</h6>
+                  <ul className="list-disc list-inside text-white/80">
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>JavaScript</li>
@@ -86,8 +209,8 @@ export default function PreviousWorkClient() {
                     <li>MySQL <span className="italic">(production)</span></li>
                   </ul>
                   <div className="mt-4">
-                    <h6 className="font-semibold text-rose-400 mb-2">Key Features:</h6>
-                    <ul className="list-disc list-inside text-gray-500">
+                    <h6 className="font-semibold text-white mb-2">Key Features:</h6>
+                    <ul className="list-disc list-inside text-white/80">
                       <li>Responsive design for mobile and desktop</li>
                       <li>Improved navigation structure</li>
                       <li>Enhanced accessibility features</li>
@@ -106,7 +229,7 @@ export default function PreviousWorkClient() {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-xl transition-colors duration-200"
+              className="flex items-center gap-2 px-4 py-2 bg-leaf hover:bg-moss/80 border-2 border-leaf hover:border-white/80 text-white rounded-xl transition-colors duration-200"
             >
               <FontAwesomeIcon icon={faGithub} className="text-lg" />
               <span>GitHub</span>
@@ -115,7 +238,7 @@ export default function PreviousWorkClient() {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-pink-600/80 hover:bg-pink-700 text-white rounded-xl transition-colors duration-200"
+              className="flex items-center gap-2 px-4 py-2 bg-heather hover:bg-heather/80 text-white border-2 border-heather hover:border-white/80 rounded-xl transition-colors duration-200"
             >
               <FontAwesomeIcon icon={faExternalLinkAlt} className="text-sm" />
               <span>Live Site</span>
@@ -125,7 +248,7 @@ export default function PreviousWorkClient() {
           {/* Toggle + accordion (sm/md only) */}
           <button
             onClick={() => toggleProject('project1')}
-            className="btn bg-rose-900 hover:bg-rose-800 text-white text-md rounded-xl mt-5 flex items-center justify-center mx-auto px-4 py-2 transition-all duration-200 lg:hidden"
+            className="btn bg-mulberry hover:bg-mulberry/90 text-white text-md rounded-xl mt-5 flex items-center justify-center mx-auto px-4 py-2 transition-all duration-200 lg:hidden"
           >
             {expandedProjects.project1 ? 'Hide Details' : 'View Details'}
             <FontAwesomeIcon
@@ -136,10 +259,10 @@ export default function PreviousWorkClient() {
           </button>
 
           <div className={`overflow-hidden transition-all duration-300 ease-in-out lg:hidden ${expandedProjects.project1 ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'}`}>
-            <div className="m-6 pt-4 border-t border-zinc-400/30">
+            <div className="m-6 pt-4 border-t border-evergreen/30">
               <div className="text-md">
-                <h6 className="font-semibold text-rose-400 mb-2">Technology Used:</h6>
-                <ul className="list-disc list-inside text-gray-500">
+                <h6 className="font-semibold text-white mb-2">Technology Used:</h6>
+                <ul className="list-disc list-inside text-white/80">
                   <li>HTML</li>
                   <li>CSS</li>
                   <li>JavaScript</li>
@@ -150,8 +273,8 @@ export default function PreviousWorkClient() {
                   <li>MySQL <span className="italic">(production)</span></li>
                 </ul>
                 <div className="mt-4">
-                  <h6 className="font-semibold text-gray-500 mb-2">Key Features:</h6>
-                  <ul className="list-disc list-inside text-gray-500">
+                  <h6 className="font-semibold text-white mb-2">Key Features:</h6>
+                  <ul className="list-disc list-inside text-white/80">
                     <li>Responsive design for mobile and desktop</li>
                     <li>Improved navigation structure</li>
                     <li>Enhanced accessibility features</li>
@@ -166,28 +289,28 @@ export default function PreviousWorkClient() {
 
 
         {/* ------------------------------------------------- Project Card #2 */}
-        <div className="w-full rounded-3xl p-8 md:p-10 bg-rose-50 backdrop-blur-xl shadow-xl mt-10 ring-4 ring-rose-300 ring-offset-2 ring-offset-white">
+        <div className="w-full rounded-3xl p-8 md:p-10 bg-mulberry backdrop-blur-xl shadow-xl mt-10 ring-4 ring-leaf ring-offset-2 ring-offset-white mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
             <div>
-              <div className="border-b border-zinc-400/50 pb-4 mb-4">
-                <h4 className="text-rose-400 mb-2 text-3xl font-semibold font-dmserif text-center">
+              <div className="border-b border-evergreen/40 pb-4 mb-4">
+                <h4 className="text-white mb-2 text-3xl font-semibold font-nunito text-center">
                   Nomad Narratives
                 </h4>
-                <h5 className="text-rose-300 mb-2 text-lg font-dmserif text-center">
-                  <span>Role: </span>Lead Developer
+                <h5 className="text-white/80 mb-8 text-md font-nunito text-center">
+                  <span>Role: </span>Sole Developer
                 </h5>
                 <div className="flex justify-center mb-4">
                   <Image
                     src="/images/nomad-screenshot.png"
-                    alt="Project 2 screenshot"
+                    alt="Nomad Narratives website screenshot"
                     width={800}
                     height={450}
-                    className="rounded-xl mt-4 ring-3 ring-rose-300 ring-offset-2 ring-offset-white"
+                    className="rounded-lg mt-4 ring-4 ring-moss"
                   />
                 </div>
                 <div className="m-6 text-md">
-                  <h6 className="font-semibold text-rose-400 mb-2 mt-2">Project Description:</h6>
-                  <p className="text-gray-500 mt-4 mb-4">
+                  <h6 className="font-semibold text-lg text-white mb-2 mt-2">Project Description:</h6>
+                  <p className="text-white/80 mt-4 mb-4">
                     Nomad Narratives is a project focused on creating a storytelling platform for travellers to share their experiences,
                     tag locations and connect with other travellers. A comprehensive platform that allows travelers to document their journeys, share stories with rich media content,
                     and discover new destinations through community-generated content. The platform features location tagging, user profiles,
@@ -199,8 +322,8 @@ export default function PreviousWorkClient() {
             <div className="hidden lg:block">
               <div className="m-6 pt-4">
                 <div className="text-md">
-                  <h6 className="font-semibold text-rose-400 mb-2">Technology Used:</h6>
-                  <ul className="list-disc list-inside text-gray-500">
+                  <h6 className="font-semibold text-white mb-2">Technology Used:</h6>
+                  <ul className="list-disc list-inside text-white/80">
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>JavaScript</li>
@@ -213,8 +336,8 @@ export default function PreviousWorkClient() {
                     <li>PostgreSQL <span className="italic">(production)</span></li>
                   </ul>
                   <div className="mt-6">
-                    <h6 className="font-semibold text-rose-400 mb-2">Key Features:</h6>
-                    <ul className="list-disc list-inside text-gray-500">
+                    <h6 className="font-semibold text-white mb-2">Key Features:</h6>
+                    <ul className="list-disc list-inside text-white/80">
                       <li>Interactive story creation with media uploads</li>
                       <li>Location-based story discovery</li>
                       <li>User networking and following system</li>
@@ -234,7 +357,7 @@ export default function PreviousWorkClient() {
               href="https://github.com/maevecrossan/nomad-narratives"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-xl transition-colors duration-200"
+              className="flex items-center gap-2 px-4 py-2 bg-leaf hover:bg-moss/80 border-2 border-leaf hover:border-white/80 text-white rounded-xl transition-colors duration-200"
             >
               <FontAwesomeIcon icon={faGithub} className="text-lg" />
               <span>GitHub</span>
@@ -243,7 +366,7 @@ export default function PreviousWorkClient() {
               href="https://nomad-narratives-05968209a16d.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-pink-600/80 hover:bg-pink-700 text-white rounded-xl transition-colors duration-200"
+              className="flex items-center gap-2 px-4 py-2 bg-heather hover:bg-heather/80 text-white border-2 border-heather hover:border-white/80 rounded-xl transition-colors duration-200"
             >
               <FontAwesomeIcon icon={faExternalLinkAlt} className="text-sm" />
               <span>Live Site</span>
@@ -252,7 +375,7 @@ export default function PreviousWorkClient() {
 
           <button
             onClick={() => toggleProject('project2')}
-            className="btn bg-rose-900 hover:bg-rose-800 text-white text-md rounded-xl mt-5 flex items-center justify-center mx-auto px-4 py-2 transition-all duration-200 lg:hidden"
+            className="btn bg-mulberry hover:bg-mulberry/90 text-white text-md rounded-xl mt-5 flex items-center justify-center mx-auto px-4 py-2 transition-all duration-200 lg:hidden"
           >
             {expandedProjects.project2 ? 'Hide Details' : 'View Details'}
             <FontAwesomeIcon
@@ -263,10 +386,10 @@ export default function PreviousWorkClient() {
           </button>
 
           <div className={`overflow-hidden transition-all duration-300 ease-in-out lg:hidden ${expandedProjects.project2 ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'}`}>
-            <div className="m-6 pt-4 border-t border-zinc-400/30">
+            <div className="m-6 pt-4 border-t border-evergreen/30">
               <div className="text-md">
-                <h6 className="font-semibold text-rose-400 mb-2">Technology Used:</h6>
-                <ul className="list-disc list-inside text-gray-500">
+                <h6 className="font-semibold text-white mb-2">Technology Used:</h6>
+                <ul className="list-disc list-inside text-white/80">
                   <li>HTML</li>
                   <li>CSS</li>
                   <li>JavaScript</li>
@@ -279,8 +402,8 @@ export default function PreviousWorkClient() {
                   <li>PostgreSQL <span className="italic">(production)</span></li>
                 </ul>
                 <div className="mt-6">
-                  <h6 className="font-semibold text-rose-400 mb-2">Key Features:</h6>
-                  <ul className="list-disc list-inside text-gray-500">
+                  <h6 className="font-semibold text-white mb-2">Key Features:</h6>
+                  <ul className="list-disc list-inside text-white/80">
                     <li>Interactive story creation with media uploads</li>
                     <li>Location-based story discovery</li>
                     <li>User networking and following system</li>
@@ -295,28 +418,28 @@ export default function PreviousWorkClient() {
 
 
         {/* ------------------------------------------------- Project Card #3 */}
-        <div className="w-full rounded-3xl p-8 md:p-10 bg-rose-50 backdrop-blur-xl shadow-xl mt-10 ring-4 ring-rose-300 ring-offset-2 ring-offset-white">
+        <div className="w-full rounded-3xl p-8 md:p-10 bg-mulberry backdrop-blur-xl shadow-xl mt-10 ring-4 ring-leaf ring-offset-2 ring-offset-white mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
             <div>
-              <div className="border-b border-zinc-400/50 pb-4 mb-4">
-                <h4 className="text-rose-400 mb-2 text-3xl font-semibold font-dmserif text-center">
+              <div className="border-b border-evergreen/40 pb-4 mb-4">
+                <h4 className="text-white mb-2 text-3xl font-semibold font-nunito text-center">
                   La Luna
                 </h4>
-                <h5 className="text-rose-300 mb-2 text-lg font-dmserif text-center">
-                  <span>Role: </span>Lead Developer
+                <h5 className="text-white/80 mb-8 text-md font-nunito text-center">
+                  <span>Role: </span>Sole Developer
                 </h5>
                 <div className="flex justify-center mb-4">
                   <Image
                     src="/images/laluna-screenshot.png"
-                    alt="Project 3 screenshot"
+                    alt="La Luna website screenshot"
                     width={800}
                     height={450}
-                    className="rounded-xl mt-4 ring-3 ring-rose-300 ring-offset-2 ring-offset-white"
+                    className="rounded-lg mt-4 ring-4 ring-moss"
                   />
                 </div>
                 <div className="m-6 text-md">
-                  <h6 className="font-semibold text-rose-400 mb-2 mt-2">Project Description:</h6>
-                  <p className="text-gray-500 mt-4 mb-4">
+                  <h6 className="font-semibold text-lg text-white mb-2 mt-2">Project Description:</h6>
+                  <p className="text-white/80 mt-4 mb-4">
                     La Luna is a website for a fictional restaurant that allows users to browse the menu,
                     make reservations, and learn about the restaurant&apos;s history. A sophisticated restaurant website featuring an elegant design that captures
                     the ambiance of fine dining. The site includes interactive menu browsing, online reservation
@@ -328,8 +451,8 @@ export default function PreviousWorkClient() {
             <div className="hidden lg:block">
               <div className="m-6 pt-4">
                 <div className="text-md">
-                  <h6 className="font-semibold text-rose-400 mb-2">Technology Used:</h6>
-                  <ul className="list-disc list-inside text-gray-500">
+                  <h6 className="font-semibold text-white mb-2">Technology Used:</h6>
+                  <ul className="list-disc list-inside text-white/80">
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>JavaScript</li>
@@ -338,8 +461,8 @@ export default function PreviousWorkClient() {
                     <li>PostgreSQL <span className="italic">(production)</span></li>
                   </ul>
                   <div className="mt-4">
-                    <h6 className="font-semibold text-rose-400 mb-2">Key Features:</h6>
-                    <ul className="list-disc list-inside text-gray-500">
+                    <h6 className="font-semibold text-white mb-2">Key Features:</h6>
+                    <ul className="list-disc list-inside text-white/80">
                       <li>Interactive menu with detailed dish descriptions</li>
                       <li>Online reservation booking system</li>
                       <li>Photo gallery showcasing ambiance and cuisine</li>
@@ -357,7 +480,7 @@ export default function PreviousWorkClient() {
               href="https://github.com/maevecrossan/la-luna"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-xl transition-colors duration-200"
+              className="flex items-center gap-2 px-4 py-2 bg-leaf hover:bg-moss/80 border-2 border-leaf hover:border-white/80 text-white rounded-xl transition-colors duration-200"
             >
               <FontAwesomeIcon icon={faGithub} className="text-lg" />
               <span>GitHub</span>
@@ -366,7 +489,7 @@ export default function PreviousWorkClient() {
               href="https://la-luna-5259bef56a63.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-pink-600/80 hover:bg-pink-700 text-white rounded-xl transition-colors duration-200"
+              className="flex items-center gap-2 px-4 py-2 bg-heather hover:bg-heather/80 text-white border-2 border-heather hover:border-white/80 rounded-xl transition-colors duration-200"
             >
               <FontAwesomeIcon icon={faExternalLinkAlt} className="text-sm" />
               <span>Live Site</span>
@@ -375,7 +498,7 @@ export default function PreviousWorkClient() {
 
           <button
             onClick={() => toggleProject('project3')}
-            className="btn bg-rose-900 hover:bg-rose-800 text-white text-md rounded-xl mt-5 flex items-center justify-center mx-auto px-4 py-2 transition-all duration-200 lg:hidden"
+            className="btn bg-mulberry hover:bg-mulberry/90 text-white text-md rounded-xl mt-5 flex items-center justify-center mx-auto px-4 py-2 transition-all duration-200 lg:hidden"
           >
             {expandedProjects.project3 ? 'Hide Details' : 'View Details'}
             <FontAwesomeIcon
@@ -386,10 +509,10 @@ export default function PreviousWorkClient() {
           </button>
 
           <div className={`overflow-hidden transition-all duration-300 ease-in-out lg:hidden ${expandedProjects.project3 ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'}`}>
-            <div className="m-6 pt-4 border-t border-zinc-400/30">
+            <div className="m-6 pt-4 border-t border-evergreen/30">
               <div className="text-md">
-                <h6 className="font-semibold text-rose-400 mb-2">Technology Used:</h6>
-                <ul className="list-disc list-inside text-gray-500">
+                <h6 className="font-semibold text-white mb-2">Technology Used:</h6>
+                <ul className="list-disc list-inside text-white/80">
                   <li>HTML</li>
                   <li>CSS</li>
                   <li>JavaScript</li>
@@ -398,8 +521,8 @@ export default function PreviousWorkClient() {
                   <li>PostgreSQL <span className="italic">(production)</span></li>
                 </ul>
                 <div className="mt-4">
-                  <h6 className="font-semibold text-rose-400 mb-2">Key Features:</h6>
-                  <ul className="list-disc list-inside text-gray-500">
+                  <h6 className="font-semibold text-white mb-2">Key Features:</h6>
+                  <ul className="list-disc list-inside text-white/80">
                     <li>Interactive menu with detailed dish descriptions</li>
                     <li>Online reservation booking system</li>
                     <li>Photo gallery showcasing ambiance and cuisine</li>
@@ -413,28 +536,28 @@ export default function PreviousWorkClient() {
         </div>
 
         {/* ------------------------------------------------- Project Card #4 */}
-        <div className="w-full rounded-3xl p-8 md:p-10 bg-rose-50 backdrop-blur-xl w-full rounded-3xl p-8 md:p-10 backdrop-blur-xl shadow-xl mt-10 ring-4 ring-rose-300 ring-offset-2 ring-offset-white">
+        <div className="w-full rounded-3xl p-8 md:p-10 bg-mulberry backdrop-blur-xl shadow-xl mt-10 ring-4 ring-leaf ring-offset-2  ring-offset-white mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
             <div>
-              <div className="border-b border-zinc-400/50 pb-4 mb-4">
-                <h4 className="text-rose-400 mb-2 text-3xl font-semibold font-dmserif text-center">
+              <div className="border-b border-evergreen/40 pb-4 mb-4">
+                <h4 className="text-white mb-2 text-3xl font-semibold font-nunito text-center">
                   Echoes of the Abyss
                 </h4>
-                <h5 className="text-rose-300 mb-2 text-lg font-dmserif text-center">
-                  <span>Role: </span>Lead Developer
+                <h5 className="text-white/80 mb-8 text-md font-nunito text-center">
+                  <span>Role: </span>Sole Developer
                 </h5>
                 <div className="flex justify-center mb-4">
                   <Image
                     src="/images/echoes-screenshot.png"
-                    alt="Project 4 screenshot"
+                    alt="Echoes of the Abyss website screenshot"
                     width={800}
                     height={450}
-                    className="rounded-xl mt-4 ring-3 ring-rose-300 ring-offset-2 ring-offset-white"
+                    className="rounded-lg mt-4 ring-4 ring-moss"
                   />
                 </div>
                 <div className="m-6 text-md">
-                  <h6 className="font-semibold text-rose-400 mb-2 mt-2">Project Description:</h6>
-                  <p className="text-gray-500 mt-4 mb-4">
+                  <h6 className="font-semibold text-lg text-white mb-2 mt-2">Project Description:</h6>
+                  <p className="text-white/80 mt-4 mb-4">
                     Echoes of the Abyss is a choose-your-own-adventure style game that allows players to explore an abandoned
                     building with a dark secret. You play as an urban explorer navigating through the eerie environment, making choices that
                     affect the outcome of the story. An immersive interactive narrative experience that combines atmospheric storytelling with decision-based gameplay.
@@ -447,16 +570,16 @@ export default function PreviousWorkClient() {
             <div className="hidden lg:block">
               <div className="m-6 pt-4">
                 <div className="text-md">
-                  <h6 className="font-semibold text-rose-400 mb-2">Technology Used:</h6>
-                  <ul className="list-disc list-inside text-gray-500">
+                  <h6 className="font-semibold text-white mb-2">Technology Used:</h6>
+                  <ul className="list-disc list-inside text-white/80">
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>Python</li>
                     <li>JavaScript</li>
                   </ul>
                   <div className="mt-4">
-                    <h6 className="font-semibold text-rose-400 mb-2">Key Features:</h6>
-                    <ul className="list-disc list-inside text-gray-500">
+                    <h6 className="font-semibold text-white mb-2">Key Features:</h6>
+                    <ul className="list-disc list-inside text-white/80">
                       <li>Branching storylines with multiple endings</li>
                       <li>Atmospheric sound design and visuals</li>
                       <li>Decision tracking and consequences</li>
@@ -476,7 +599,7 @@ export default function PreviousWorkClient() {
               href="https://github.com/maevecrossan/echoes-of-the-abyss"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-xl transition-colors duration-200"
+              className="flex items-center gap-2 px-4 py-2 bg-leaf hover:bg-moss/80 border-2 border-leaf hover:border-white/80 text-white rounded-xl transition-colors duration-200"
             >
               <FontAwesomeIcon icon={faGithub} className="text-lg" />
               <span>GitHub</span>
@@ -485,7 +608,7 @@ export default function PreviousWorkClient() {
               href="https://echoes-of-the-abyss-8920634f42db.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-pink-600/80 hover:bg-pink-700 text-white rounded-xl transition-colors duration-200"
+              className="flex items-center gap-2 px-4 py-2 bg-heather hover:bg-heather/80 text-white border-2 border-heather hover:border-white/80 rounded-xl transition-colors duration-200"
             >
               <FontAwesomeIcon icon={faExternalLinkAlt} className="text-sm" />
               <span>Live Site</span>
@@ -494,7 +617,7 @@ export default function PreviousWorkClient() {
 
           <button
             onClick={() => toggleProject('project4')}
-            className="btn bg-rose-900 hover:bg-rose-800 text-white text-md rounded-xl mt-5 flex items-center justify-center mx-auto px-4 py-2 transition-all duration-200 lg:hidden"
+            className="btn bg-mulberry hover:bg-mulberry/90 text-white text-md rounded-xl mt-5 flex items-center justify-center mx-auto px-4 py-2 transition-all duration-200 lg:hidden"
           >
             {expandedProjects.project4 ? 'Hide Details' : 'View Details'}
             <FontAwesomeIcon
@@ -505,18 +628,18 @@ export default function PreviousWorkClient() {
           </button>
 
           <div className={`overflow-hidden transition-all duration-300 ease-in-out lg:hidden ${expandedProjects.project4 ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'}`}>
-            <div className="m-6 pt-4 border-t border-zinc-400/30">
+            <div className="m-6 pt-4 border-t border-evergreen/30">
               <div className="text-md">
-                <h6 className="font-semibold text-rose-400 mb-2">Technology Used:</h6>
-                <ul className="list-disc list-inside text-gray-500">
+                <h6 className="font-semibold text-white mb-2">Technology Used:</h6>
+                <ul className="list-disc list-inside text-white/80">
                   <li>HTML</li>
                   <li>CSS</li>
                   <li>Python</li>
                   <li>JavaScript</li>
                 </ul>
                 <div className="mt-4">
-                  <h6 className="font-semibold text-rose-400 mb-2">Key Features:</h6>
-                  <ul className="list-disc list-inside text-gray-500">
+                  <h6 className="font-semibold text-white mb-2">Key Features:</h6>
+                  <ul className="list-disc list-inside text-white/80">
                     <li>Branching storylines with multiple endings</li>
                     <li>Atmospheric sound design and visuals</li>
                     <li>Decision tracking and consequences</li>
@@ -530,28 +653,28 @@ export default function PreviousWorkClient() {
         </div>
 
         {/* ------------------------------------------------- Project Card #5 */}
-        <div className="w-full rounded-3xl p-8 md:p-10 bg-rose-50 backdrop-blur-xl shadow-xl mt-10 ring-4 ring-rose-300 ring-offset-2 ring-offset-white">
+        <div className="w-full rounded-3xl p-8 md:p-10 bg-mulberry backdrop-blur-xl shadow-xl mt-10 ring-4 ring-leaf ring-offset-2 ring-offset-white mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
             <div>
-              <div className="border-b border-zinc-400/50 pb-4 mb-4">
-                <h4 className="text-rose-400 mb-2 text-3xl font-semibold font-dmserif text-center">
+              <div className="border-b border-evergreen/40 pb-4 mb-4">
+                <h4 className="text-white mb-2 text-3xl font-semibold font-nunito text-center">
                   Byte Battles
                 </h4>
-                <h5 className="text-rose-300 mb-2 text-lg font-dmserif text-center">
-                  <span>Role: </span>Lead Developer
+                <h5 className="text-white/80 mb-8 text-md font-nunito text-center">
+                  <span>Role: </span>Sole Developer
                 </h5>
                 <div className="flex justify-center mb-4">
                   <Image
                     src="/images/byte-screenshot.png"
-                    alt="Project 5 screenshot"
+                    alt="Byte Battles website screenshot"
                     width={800}
                     height={450}
-                    className="rounded-xl mt-4 ring-3 ring-rose-300 ring-offset-2 ring-offset-white"
+                    className="rounded-lg mt-4 ring-4 ring-moss"
                   />
                 </div>
                 <div className="m-6 text-md">
-                  <h6 className="font-semibold text-rose-400 mb-2 mt-2">Project Description:</h6>
-                  <p className="text-gray-500 mt-4 mb-4">
+                  <h6 className="font-semibold text-lg text-white mb-2 mt-2">Project Description:</h6>
+                  <p className="text-white/80 mt-4 mb-4">
                     Battle Bytes is a fun, retro-inspired tic-tac-toe game designed for casual players of all ages. It offers both
                     single-player and local multiplayer modes on one device. The game features a clean, clutter-free interface with
                     nostalgic pixel art vibes, vibrant colours, and an intuitive experience suitable for kids, casual gamers, and
@@ -563,15 +686,15 @@ export default function PreviousWorkClient() {
             <div className="hidden lg:block">
               <div className="m-6 pt-4">
                 <div className="text-md">
-                  <h6 className="font-semibold text-rose-400 mb-2">Technology Used:</h6>
-                  <ul className="list-disc list-inside text-gray-500">
+                  <h6 className="font-semibold text-white mb-2">Technology Used:</h6>
+                  <ul className="list-disc list-inside text-white/80">
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>JavaScript</li>
                   </ul>
                   <div className="mt-4">
-                    <h6 className="font-semibold text-rose-400 mb-2">Key Features:</h6>
-                    <ul className="list-disc list-inside text-gray-500">
+                    <h6 className="font-semibold text-white mb-2">Key Features:</h6>
+                    <ul className="list-disc list-inside text-white/80">
                       <li>Turn-based strategic gameplay</li>
                       <li>Score tracking</li>
                       <li>Mobile friendly</li>
@@ -589,7 +712,7 @@ export default function PreviousWorkClient() {
               href="https://github.com/maevecrossan/byte-battles"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-xl transition-colors duration-200"
+              className="flex items-center gap-2 px-4 py-2 bg-leaf hover:bg-moss/80 border-2 border-leaf hover:border-white/80 text-white rounded-xl transition-colors duration-200"
             >
               <FontAwesomeIcon icon={faGithub} className="text-lg" />
               <span>GitHub</span>
@@ -598,7 +721,7 @@ export default function PreviousWorkClient() {
               href="https://maevecrossan.github.io/byte-battles/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-pink-600/80 hover:bg-pink-700 text-white rounded-xl transition-colors duration-200"
+              className="flex items-center gap-2 px-4 py-2 bg-heather hover:bg-heather/80 text-white border-2 border-heather hover:border-white/80 rounded-xl transition-colors duration-200"
             >
               <FontAwesomeIcon icon={faExternalLinkAlt} className="text-sm" />
               <span>Live Site</span>
@@ -607,7 +730,7 @@ export default function PreviousWorkClient() {
 
           <button
             onClick={() => toggleProject('project5')}
-            className="btn bg-rose-900 hover:bg-rose-800 text-white text-md rounded-xl mt-5 flex items-center justify-center mx-auto px-4 py-2 transition-all duration-200 lg:hidden"
+            className="btn bg-mulberry hover:bg-mulberry/90 text-white text-md rounded-xl mt-5 flex items-center justify-center mx-auto px-4 py-2 transition-all duration-200 lg:hidden"
           >
             {expandedProjects.project5 ? 'Hide Details' : 'View Details'}
             <FontAwesomeIcon
@@ -618,17 +741,17 @@ export default function PreviousWorkClient() {
           </button>
 
           <div className={`overflow-hidden transition-all duration-300 ease-in-out lg:hidden ${expandedProjects.project5 ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'}`}>
-            <div className="m-6 pt-4 border-t border-zinc-400/30">
+            <div className="m-6 pt-4 border-t border-evergreen/30">
               <div className="text-md">
-                <h6 className="font-semibold text-rose-400 mb-2">Technology Used:</h6>
-                <ul className="list-disc list-inside text-gray-500">
+                <h6 className="font-semibold text-white mb-2">Technology Used:</h6>
+                <ul className="list-disc list-inside text-white/80">
                   <li>HTML</li>
                   <li>CSS</li>
                   <li>JavaScript</li>
                 </ul>
                 <div className="mt-4">
-                  <h6 className="font-semibold text-rose-400 mb-2">Key Features:</h6>
-                  <ul className="list-disc list-inside text-gray-500">
+                  <h6 className="font-semibold text-white mb-2">Key Features:</h6>
+                  <ul className="list-disc list-inside text-white/80">
                     <li>Turn-based strategic gameplay</li>
                     <li>Multiple game shapes and variations</li>
                     <li>AI opponent with difficulty levels</li>
@@ -642,28 +765,28 @@ export default function PreviousWorkClient() {
         </div>
 
         {/* ------------------------------------------------- Project Card #6 */}
-        <div className="w-full rounded-3xl p-8 md:p-10 bg-rose-50 backdrop-blur-xl shadow-xl mt-10 ring-4 ring-rose-300 ring-offset-2 ring-offset-white">
+        <div className="w-full rounded-3xl p-8 md:p-10 bg-mulberry backdrop-blur-xl shadow-xl mt-10 ring-4 ring-leaf ring-offset-2 ring-offset-white mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
             <div>
-              <div className="border-b border-zinc-400/50 pb-4 mb-4">
-                <h4 className="text-rose-400 mb-2 text-3xl font-semibold font-dmserif text-center">
+              <div className="border-b border-evergreen/40 pb-4 mb-4">
+                <h4 className="text-white mb-2 text-3xl font-semibold font-nunito text-center">
                   Peaceful Path
                 </h4>
-                <h5 className="text-rose-300 mb-2 text-lg font-dmserif text-center">
-                  <span>Role: </span>Lead Developer
+                <h5 className="text-white/80 mb-8 text-md font-nunito text-center">
+                  <span>Role: </span>Sole Developer
                 </h5>
                 <div className="flex justify-center mb-4">
                   <Image
                     src="/images/peaceful-screenshot.png"
-                    alt="Project 6 screenshot"
+                    alt="Peaceful Path website screenshot"
                     width={800}
                     height={450}
-                    className="rounded-xl mt-4 ring-3 ring-rose-300 ring-offset-2 ring-offset-white"
+                    className="rounded-lg mt-4 ring-4 ring-moss"
                   />
                 </div>
                 <div className="m-6 text-md">
-                  <h6 className="font-semibold text-rose-400 mb-2 mt-2">Project Description:</h6>
-                  <p className="text-gray-500 mt-4 mb-4">
+                  <h6 className="font-semibold text-lg text-white mb-2 mt-2">Project Description:</h6>
+                  <p className="text-white/80 mt-4 mb-4">
                     Peaceful Path is a landing page for a program designed to help users find inner peace and
                     relaxation through guided meditations and mindfulness exercises. A serene and calming landing page designed to promote mental wellness through meditation and
                     mindfulness practices. The design emphasizes tranquility and ease of use, encouraging visitors
@@ -675,14 +798,14 @@ export default function PreviousWorkClient() {
             <div className="hidden lg:block">
               <div className="m-6 pt-4">
                 <div className="text-md">
-                  <h6 className="font-semibold text-rose-400 mb-2">Technology Used:</h6>
-                  <ul className="list-disc list-inside text-gray-500">
+                  <h6 className="font-semibold text-white mb-2">Technology Used:</h6>
+                  <ul className="list-disc list-inside text-white/80">
                     <li>HTML</li>
                     <li>CSS</li>
                   </ul>
                   <div className="mt-4">
-                    <h6 className="font-semibold text-rose-400 mb-2">Key Features:</h6>
-                    <ul className="list-disc list-inside text-gray-500">
+                    <h6 className="font-semibold text-white mb-2">Key Features:</h6>
+                    <ul className="list-disc list-inside text-white/80">
                       <li>Calming and peaceful design aesthetic</li>
                       <li>Introductory landing page</li>
                       <li>Program information and benefits</li>
@@ -701,7 +824,7 @@ export default function PreviousWorkClient() {
               href="https://github.com/maevecrossan/peaceful-path"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-xl transition-colors duration-200"
+              className="flex items-center gap-2 px-4 py-2 bg-leaf hover:bg-moss/80 border-2 border-leaf hover:border-white/80 text-white rounded-xl transition-colors duration-200"
             >
               <FontAwesomeIcon icon={faGithub} className="text-lg" />
               <span>GitHub</span>
@@ -710,7 +833,7 @@ export default function PreviousWorkClient() {
               href="https://maevecrossan.github.io/peaceful-path/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-pink-600/80 hover:bg-pink-700 text-white rounded-xl transition-colors duration-200"
+              className="flex items-center gap-2 px-4 py-2 bg-heather hover:bg-heather/80 text-white border-2 border-heather hover:border-white/80 rounded-xl transition-colors duration-200"
             >
               <FontAwesomeIcon icon={faExternalLinkAlt} className="text-sm" />
               <span>Live Site</span>
@@ -719,7 +842,7 @@ export default function PreviousWorkClient() {
 
           <button
             onClick={() => toggleProject('project6')}
-            className="btn bg-rose-900 hover:bg-rose-800 text-white text-md rounded-xl mt-5 flex items-center justify-center mx-auto px-4 py-2 transition-all duration-200 lg:hidden"
+            className="btn bg-mulberry hover:bg-mulberry/90 text-white text-md rounded-xl mt-5 flex items-center justify-center mx-auto px-4 py-2 transition-all duration-200 lg:hidden"
           >
             {expandedProjects.project6 ? 'Hide Details' : 'View Details'}
             <FontAwesomeIcon
@@ -730,16 +853,16 @@ export default function PreviousWorkClient() {
           </button>
 
           <div className={`overflow-hidden transition-all duration-300 ease-in-out lg:hidden ${expandedProjects.project6 ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'}`}>
-            <div className="m-6 pt-4 border-t border-zinc-400/30">
+            <div className="m-6 pt-4 border-t border-evergreen/30">
               <div className="text-md">
-                <h6 className="font-semibold text-rose-400 mb-2">Technology Used:</h6>
-                <ul className="list-disc list-inside text-gray-500">
+                <h6 className="font-semibold text-white mb-2">Technology Used:</h6>
+                <ul className="list-disc list-inside text-white/80">
                   <li>HTML</li>
                   <li>CSS</li>
                 </ul>
                 <div className="mt-4">
-                  <h6 className="font-semibold text-rose-400 mb-2">Key Features:</h6>
-                  <ul className="list-disc list-inside text-gray-500">
+                  <h6 className="font-semibold text-white mb-2">Key Features:</h6>
+                  <ul className="list-disc list-inside text-white/80">
                     <li>Calming and peaceful design aesthetic</li>
                     <li>Introductory landing page</li>
                     <li>Program information and benefits</li>

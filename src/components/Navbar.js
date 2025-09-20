@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Navbar() {
     return (
-        <nav className="bg-amber-50 shadow-xl">
+        <nav className="bg-moss shadow-xl">
             <div className="flex flex-col items-center px-4 py-2">
                 {/* Top row: burger + logo (mobile), just logo (desktop) */}
                 <div className="flex w-full items-center justify-between md:justify-center">
@@ -14,7 +14,7 @@ export default function Navbar() {
                             <div
                                 tabIndex={0}
                                 role="button"
-                                className="btn btn-circle bg-rose-300 text-white border border-rose-100"
+                                className="btn btn-circle bg-mulberry text-white border border-evergreen"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -33,12 +33,12 @@ export default function Navbar() {
                             </div>
                             <ul
                                 tabIndex={0}
-                                className="menu menu-sm dropdown-content mt-3 z-[1] w-52 rounded-box p-2 shadow-xl uppercase font-teko font-medium text-rose-200 bg-amber-50 border border-rose-100"
+                                className="menu menu-sm dropdown-content mt-3 z-[1] w-52 rounded-box p-2 shadow-xl uppercase font-nunito font-medium text-white bg-mulberry border border-white"
                             >
                                 <li>
                                     <Link
                                         href="/"
-                                        className="text-2xl tracking-widest"
+                                        className="text-2xl tracking-widest hover:underline"
                                     >
                                         Home
                                     </Link>
@@ -46,7 +46,7 @@ export default function Navbar() {
                                 <li>
                                     <Link
                                         href="/previous-work"
-                                        className="text-2xl tracking-widest"
+                                        className="text-2xl tracking-widest hover:underline"
                                     >
                                         Previous Work
                                     </Link>
@@ -54,7 +54,7 @@ export default function Navbar() {
                                 <li>
                                     <Link
                                         href="/about"
-                                        className="text-2xl tracking-widest"
+                                        className="text-2xl tracking-widest hover:underline"
                                     >
                                         About
                                     </Link>
@@ -62,7 +62,7 @@ export default function Navbar() {
                                 <li>
                                     <Link
                                         href="/contact"
-                                        className="text-2xl tracking-widest"
+                                        className="text-2xl tracking-widest hover:underline"
                                     >
                                         Contact
                                     </Link>
@@ -72,11 +72,11 @@ export default function Navbar() {
                     </div>
 
                     {/* Logo */}
-                    <div className="font-caprasimo text-rose-300 flex flex-col items-center justify-center">
-                        <h1 className="mx-3 mt-4 text-5xl tracking-wider text-center">
+                    <div className="font-melodrama text-white/90 flex flex-col items-center justify-center">
+                        <h1 className="mx-3 mt-4 text-7xl font-bold tracking-wider text-center">
                             <Link href="/">Maeve Crossan</Link>
                         </h1>
-                        <h2 className="mx-3 my-4 text-xl tracking-wider text-center font-semibold text-rose-200">
+                        <h2 className="mx-3 my-4 text-3xl tracking-wider text-center font-semibold text-white/90">
                             Full Stack Developer
                         </h2>
                     </div>
@@ -85,8 +85,8 @@ export default function Navbar() {
                 </div>
 
                 {/* Nav links: visible only on md+ screens */}
-                <div className="mt-4 mb-1 hidden md:flex items-center text-xl uppercase tracking-widest font-teko whitespace-nowrap text-orange-200 font-medium">
-                    <div className="flex gap-6 items-center text-orange-200">
+                <div className="mt-6 mb-4 mb-1 hidden md:flex items-center text-xl uppercase tracking-widest font-melodrama whitespace-nowrap text-heather font-semibold">
+                    <div className="flex gap-6 items-center text-heather">
                         {[
                             { href: "/", label: "Home" },
                             { href: "/previous-work", label: "Previous Work" },
@@ -97,15 +97,15 @@ export default function Navbar() {
                                 <div className="group relative w-max">
                                     <Link
                                         href={link.href}
-                                        className="text-orange-200/70 hover:text-orange-300 transition-colors duration-300"
+                                        className="text-white/80 hover:text-white transition-colors duration-300"
                                     >
                                         <span>{link.label}</span>
-                                        <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-orange-300 transition-all duration-300 group-hover:w-3/6" />
-                                        <span className="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-orange-300 transition-all duration-300 group-hover:w-3/6" />
+                                        <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-3/6" />
+                                        <span className="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-3/6" />
                                     </Link>
                                 </div>
                                 {index < 3 && (
-                                    <span className="font-light text-orange-100">
+                                    <span className="font-light text-white/50">
                                         |
                                     </span>
                                 )}

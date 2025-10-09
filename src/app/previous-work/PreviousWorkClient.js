@@ -227,19 +227,14 @@ export default function PreviousWorkClient() {
                 <h5 className="text-white/80 mb-8 text-md font-nunito text-center">
                   <span>Role: </span>Front End Developer, UI/UX Consultant
                 </h5>
-                <div className="flex justify-center items-center mb-4 p-20 ring-4 ring-moss rounded-xl bg-white/80 text-mulberry">
-                  {/* <Image
-                    src="/images/laluna-screenshot.png"
-                    alt="Project 1 screenshot"
+                <div className="flex justify-center mb-4">
+                  <Image
+                    src="/images/tcsp-screenshot.png"
+                    alt="TCSP screenshot"
                     width={800}
                     height={450}
                     className="rounded-lg mt-4 ring-4 ring-moss"
-                  /> */}
-                  <FontAwesomeIcon
-                    icon={faHourglassHalf}
-                    className="text-5xl"
                   />
-                  Coming Soon...
                 </div>
                 <div className="m-6 text-md">
                   <h6 className="font-semibold text-lg text-white mb-2 mt-2">Project Description:</h6>

@@ -30,7 +30,7 @@ export default function ContactPage() {
                   <h4 className="text-mulberry mb-2 text-3xl font-bold font-nunito text-center lg:text-left">
                     Let’s work together
                   </h4>
-                  <p className="text-evergreen/70 mt-4">
+                  <p className="text-white/90 mt-4">
                     I’m currently open to opportunities and collaborations. I care a lot about accessibility, clean UI, and building helpful, human-centered products.
                   </p>
                 </div>

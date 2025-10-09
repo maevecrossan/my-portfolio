@@ -29,6 +29,13 @@ export default function AboutClient() {
 
   const portfolioProjects = [
     {
+      name: 'Templeogue College Swim Pool',
+      summary: 'Website for the Templeogue College swimming pool, featuring class schedules and booking capabilities.',
+      tech: 'JavaScript, Python, Tailwind CSS, Django, MySQL',
+      github: 'https://github.com/morgan360/swimtcsp/tree/main',
+      live: 'https://www.tcsp.ie/',
+    },
+    {
       name: 'Brandmark Agencies',
       summary: 'B2B marketing site for a retail brand agency with reusable brand portfolio pages.',
       tech: 'Next.js 15, React 19, Tailwind CSS, Font Awesome',

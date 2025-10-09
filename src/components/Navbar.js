@@ -33,12 +33,12 @@ export default function Navbar() {
                             </div>
                             <ul
                                 tabIndex={0}
-                                className="menu menu-sm dropdown-content mt-3 z-[1] w-52 rounded-box p-2 shadow-xl uppercase font-nunito font-medium text-white bg-mulberry border border-white"
+                                className="menu menu-sm dropdown-content mt-3 z-[1] w-64 rounded-box p-2 shadow-xl uppercase font-nunito font-small text-white bg-mulberry border border-white"
                             >
                                 <li>
                                     <Link
                                         href="/"
-                                        className="text-2xl tracking-widest hover:underline"
+                                        className="text-lg tracking-widest hover:underline"
                                     >
                                         Home
                                     </Link>
@@ -46,7 +46,7 @@ export default function Navbar() {
                                 <li>
                                     <Link
                                         href="/previous-work"
-                                        className="text-2xl tracking-widest hover:underline"
+                                        className="text-lg tracking-widest hover:underline"
                                     >
                                         Previous Work
                                     </Link>
@@ -54,7 +54,7 @@ export default function Navbar() {
                                 <li>
                                     <Link
                                         href="/about"
-                                        className="text-2xl tracking-widest hover:underline"
+                                        className="text-lg tracking-widest hover:underline"
                                     >
                                         About
                                     </Link>
@@ -62,7 +62,7 @@ export default function Navbar() {
                                 <li>
                                     <Link
                                         href="/contact"
-                                        className="text-2xl tracking-widest hover:underline"
+                                        className="text-lg tracking-widest hover:underline"
                                     >
                                         Contact
                                     </Link>

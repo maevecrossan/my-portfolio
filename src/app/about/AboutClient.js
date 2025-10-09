@@ -16,6 +16,32 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 export default function AboutClient() {
   const [open, setOpen] = useState(false);
+  const handleCvDownload = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch('/api/cv');
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch CV');
+      }
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+
+      link.href = url;
+      link.download = 'MaeveCrossan.pdf';
+      document.body.appendChild(link);
+      link.click();
+
+      link.remove();
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('CV download failed', error);
+      window.location.href = '/api/cv';
+    }
+  };
 
   const portfolioProjects = [
     {
@@ -154,9 +180,10 @@ export default function AboutClient() {
                 </p>
                 <p>
                   <a
-                    href="/MaeveCrossan.pdf"
+                    href="/api/cv"
                     className="font-semibold hover:underline"
                     download="MaeveCrossan.pdf"
+                    onClick={handleCvDownload}
                   >
                     <FontAwesomeIcon icon={faFileArrowDown} className="mr-1 text-heather" />
                     Download CV <span className="text-xs italic">(download will begin immediately)</span>

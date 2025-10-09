@@ -5,6 +5,33 @@ import { faFileArrowDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 export default function ContactPage() {
+  const handleCvDownload = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch('/api/cv');
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch CV');
+      }
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+
+      link.href = url;
+      link.download = 'MaeveCrossan.pdf';
+      document.body.appendChild(link);
+      link.click();
+
+      link.remove();
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('CV download failed', error);
+      window.location.href = '/api/cv';
+    }
+  };
+
   return (
     <main className="flex flex-col items-center min-h-screen m-2">
       {/* Header card */}
@@ -57,10 +84,11 @@ export default function ContactPage() {
                       <span className="font-medium">LinkedIn</span>
                     </a>
                     <a
-                      href="MaeveCrossan.pdf"
+                      href="/api/cv"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center bg-heather/60 gap-2 px-3 py-2 rounded-xl ring-2 ring-mulberry hover:bg-heather/50 transition"
+                      onClick={handleCvDownload}
                     >
                       <FontAwesomeIcon icon={faFileArrowDown} />
                       <span className="font-medium">View CV</span>

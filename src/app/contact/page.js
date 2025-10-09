@@ -5,31 +5,15 @@ import { faFileArrowDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 export default function ContactPage() {
-  const handleCvDownload = async (event) => {
+  const handleCvDownload = (event) => {
     event.preventDefault();
 
-    try {
-      const response = await fetch('/api/cv');
-
-      if (!response.ok) {
-        throw new Error('Failed to fetch CV');
-      }
-
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
-
-      link.href = url;
-      link.download = 'MaeveCrossan.pdf';
-      document.body.appendChild(link);
-      link.click();
-
-      link.remove();
-      window.URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error('CV download failed', error);
-      window.location.href = '/api/cv';
-    }
+    const link = document.createElement('a');
+    link.href = '/MaeveCrossan.pdf';
+    link.download = 'MaeveCrossan.pdf';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
   };
 
   return (
@@ -84,7 +68,7 @@ export default function ContactPage() {
                       <span className="font-medium">LinkedIn</span>
                     </a>
                     <a
-                      href="/api/cv"
+                      href="/MaeveCrossan.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center bg-heather/60 gap-2 px-3 py-2 rounded-xl ring-2 ring-mulberry hover:bg-heather/50 transition"

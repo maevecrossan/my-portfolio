@@ -29,10 +29,71 @@ export default function PreviousWorkClient() {
       </div>
 
       {/* Projects ordered by date (recent -> oldest) */}
+      {/* --------------------------------------------------- Portfolio Site */}
+      <div className="gap-8 w-full max-w-screen-xl mt-10 px-4 animate-drop-in" style={{ ['--delay']: '140ms' }}>
+        <div className="w-full rounded-3xl p-8 md:p-10 bg-mulberry backdrop-blur-xl shadow-xl mt-10 ring-4 ring-leaf ring-offset-2 ring-offset-white mb-10">
+          <h4 className="text-white mt-4 mb-6 text-3xl font-semibold font-nunito">
+            Portfolio Site <span className="text-white text-xl">(You are here!)</span>
+          </h4>
+          <h5 className="text-white/80 mb-8 text-md font-nunito">
+            <span>Role: </span> Sole Designer &amp; Developer
+          </h5>
+          <p className="text-white mb-8 text-lg">
+            Below is a breakdown of the technologies and key features used in this portfolio site.
+          </p>
 
-      <div className='gap-8 w-full max-w-screen-xl py-10 px-4 animate-drop-in' style={{ ['--delay']: '140ms' }}>
+          <div>
+              <div className="m-4 ">
+                <div className="text-md">
+                  <h6 className="font-semibold text-white mb-2">Technology Used:</h6>
+                  <ul className="list-disc list-inside text-white/80">
+                    <li>Next.js 15 App Router</li>
+                    <li>React 19</li>
+                    <li>Node.js</li>
+                    <li>Tailwind CSS with DaisyUI</li>
+                    <li>Font Awesome 7 icon system</li>
+                  </ul>
+                  <div className="mt-4">
+                    <h6 className="font-semibold text-white mb-2">Key Features:</h6>
+                    <ul className="list-disc list-inside text-white/80">
+                      <li>API routing</li>
+                      <li>Responsive, mobile-first design</li>
+                      <li>Expandable project cards</li>
+                      <li>Animated elements</li>
+                      <li>Contact form and CV viewing and downloading</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Project Links */}
+          <div className="flex justify-center gap-4 mb-4">
+            <a
+              href="https://github.com/maevecrossan/my-portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-leaf hover:bg-moss/80 border-2 border-leaf hover:border-white/80 text-white font-medium rounded-xl transition-colors duration-200"
+            >
+              <FontAwesomeIcon icon={faGithub} className="text-lg" />
+              <span>GitHub</span>
+            </a>
+            <a
+              href="https://maevecrossan.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-heather hover:bg-heather/80 text-white border-2 border-heather hover:border-white/80 rounded-xl transition-colors duration-200"
+            >
+              <FontAwesomeIcon icon={faExternalLinkAlt} className="text-sm" />
+              <span>Live Site</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className='gap-8 w-full max-w-screen-xl px-4 animate-drop-in' style={{ ['--delay']: '140ms' }}>
         {/* ------------------------------------------------- Brandmark Project Card */}
-                <div className="w-full rounded-3xl p-8 md:p-10 bg-mulberry backdrop-blur-xl shadow-xl mt-10 ring-4 ring-leaf ring-offset-2 ring-offset-white mb-20">
+        <div className="w-full rounded-3xl p-8 md:p-10 bg-mulberry backdrop-blur-xl shadow-xl mt-10 ring-4 ring-leaf ring-offset-2 ring-offset-white mb-20">
           {/* Two-column on lg+, stacked on sm/md */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
             {/* LEFT: Title/Role/Image */}
@@ -124,9 +185,8 @@ export default function PreviousWorkClient() {
           </button>
 
           <div
-            className={`overflow-hidden transition-all duration-300 ease-in-out lg:hidden ${
-              expandedProjects.project1 ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
-            }`}
+            className={`overflow-hidden transition-all duration-300 ease-in-out lg:hidden ${expandedProjects.project1 ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
+              }`}
           >
             <div className="m-6 pt-4 border-t border-evergreen/30">
               <div className="text-md">

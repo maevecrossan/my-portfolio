@@ -20,7 +20,7 @@ export default function ContactPage() {
     <main className="flex flex-col items-center min-h-screen m-2">
       {/* Header card */}
       <div className="mx-auto px-4 ml-4 mr-4 mt-12 bg-heather shadow-xl text-center rounded-xl ring-4 ring-leaf ring-offset-2 ring-offset-white animate-drop-in" style={{ ['--delay']: '0ms' }}>
-        <h3 className="text-white mt-10 mb-6 text-3xl font-semibold font-nunito">
+        <h3 className="text-white mt-10 mb-6 text-3xl font-semibold font-melodrama">
           Get in Touch
         </h3>
         <p className="text-white mb-12 text-lg max-w-2xl mx-auto">

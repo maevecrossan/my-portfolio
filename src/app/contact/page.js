@@ -19,7 +19,8 @@ export default function ContactPage() {
   return (
     <main className="flex flex-col items-center min-h-screen m-2">
       {/* Header card */}
-      <div className="mx-auto px-4 ml-4 mr-4 mt-12 bg-heather shadow-xl text-center rounded-xl ring-4 ring-leaf ring-offset-2 ring-offset-white animate-drop-in" style={{ ['--delay']: '0ms' }}>
+      <div className="mx-auto px-4 ml-4 mr-4 mt-12 bg-heather shadow-xl text-center 
+      rounded-xl ring-4 ring-leaf ring-offset-2 ring-offset-white animate-drop-in" style={{ ['--delay']: '0ms' }}>
         <h3 className="text-white mt-10 mb-6 text-3xl font-semibold font-melodrama">
           Get in Touch
         </h3>
@@ -32,17 +33,21 @@ export default function ContactPage() {
       <div className="w-full max-w-screen-xl py-10 px-4 animate-drop-in" style={{ ['--delay']: '140ms' }}>
         <div className="relative w-full rounded-3xl mt-10">
           <div className="absolute inset-0 rounded-3xl bg-white/50 pointer-events-none" />
-          <div className="relative w-full rounded-3xl p-8 md:p-10 bg-heather/50 backdrop-blur-xl shadow-xl text-evergreen ring-4 ring-leaf ring-offset-2 ring-offset-white">
+          <div className="relative w-full rounded-3xl p-8 md:p-10 bg-heather/50 
+          backdrop-blur-xl shadow-xl text-evergreen ring-4 ring-leaf ring-offset-2 
+          ring-offset-white">
             {/* Two-column on lg+, stacked on sm/md */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
               {/* LEFT: Intro + direct links */}
               <div>
                 <div className="border-b border-evergreen/40 pb-4 mb-6">
-                  <h4 className="text-mulberry mb-2 text-3xl font-bold font-nunito text-center lg:text-left">
+                  <h4 className="text-mulberry mb-2 text-3xl font-bold font-nunito text-center 
+                  lg:text-left">
                     Let’s work together
                   </h4>
                   <p className="text-white/90 mt-4">
-                    I’m currently open to opportunities and collaborations. I care a lot about accessibility, clean UI, and building helpful, human-centered products.
+                    I’m currently open to opportunities and collaborations. I care a lot about accessibility, 
+                    clean UI, and building helpful, human-centered products.
                   </p>
                 </div>
 
@@ -53,7 +58,8 @@ export default function ContactPage() {
                       href="https://github.com/maevecrossan"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center bg-heather/60 gap-2 px-3 py-2 rounded-xl ring-2 ring-mulberry hover:bg-heather/50 transition"
+                      className="inline-flex items-center bg-heather/60 gap-2 px-3 py-2 rounded-xl ring-2 
+                      ring-mulberry hover:bg-heather/50 transition"
                     >
                       <FontAwesomeIcon icon={faGithub} />
                       <span className="font-medium">GitHub</span>
@@ -62,7 +68,8 @@ export default function ContactPage() {
                       href="https://www.linkedin.com/in/maeve-crossan/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center bg-heather/60 gap-2 px-3 py-2 rounded-xl ring-2 ring-mulberry hover:bg-heather/50 transition"
+                      className="inline-flex items-center bg-heather/60 gap-2 px-3 py-2 rounded-xl ring-2 
+                      ring-mulberry hover:bg-heather/50 transition"
                     >
                       <FontAwesomeIcon icon={faLinkedin} />
                       <span className="font-medium">LinkedIn</span>
@@ -71,7 +78,8 @@ export default function ContactPage() {
                       href="/MaeveCrossan.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center bg-heather/60 gap-2 px-3 py-2 rounded-xl ring-2 ring-mulberry hover:bg-heather/50 transition"
+                      className="inline-flex items-center bg-heather/60 gap-2 px-3 py-2 rounded-xl ring-2 
+                      ring-mulberry hover:bg-heather/50 transition"
                       onClick={handleCvDownload}
                     >
                       <FontAwesomeIcon icon={faFileArrowDown} />
@@ -109,7 +117,8 @@ export default function ContactPage() {
                         id="name"
                         name="name"
                         required
-                        className="w-full bg-white/90 px-4 py-3 border border-evergreen/30 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-mulberry focus:border-mulberry"
+                        className="w-full bg-white/90 px-4 py-3 border border-evergreen/30 rounded-xl shadow-sm 
+                        focus:outline-none focus:ring-2 focus:ring-mulberry focus:border-mulberry"
                         placeholder="Your name"
                       />
                     </div>
@@ -120,7 +129,8 @@ export default function ContactPage() {
                         id="email"
                         name="email"
                         required
-                        className="w-full bg-white/90 px-4 py-3 border border-evergreen/30 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-mulberry focus:border-mulberry"
+                        className="w-full bg-white/90 px-4 py-3 border border-evergreen/30 rounded-xl shadow-sm 
+                        focus:outline-none focus:ring-2 focus:ring-mulberry focus:border-mulberry"
                         placeholder="you@example.com"
                       />
                     </div>
@@ -133,7 +143,8 @@ export default function ContactPage() {
                       id="subject"
                       name="subject"
                       required
-                      className="w-full bg-white/90 px-4 py-3 border border-evergreen/30 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-mulberry focus:border-mulberry"
+                      className="w-full bg-white/90 px-4 py-3 border border-evergreen/30 rounded-xl shadow-sm 
+                      focus:outline-none focus:ring-2 focus:ring-mulberry focus:border-mulberry"
                       placeholder="How can I help?"
                     />
                   </div>
@@ -145,7 +156,8 @@ export default function ContactPage() {
                       name="message"
                       rows={6}
                       required
-                      className="w-full bg-white/90 px-4 py-3 border border-evergreen/30 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-mulberry focus:border-mulberry"
+                      className="w-full bg-white/90 px-4 py-3 border border-evergreen/30 rounded-xl shadow-sm 
+                      focus:outline-none focus:ring-2 focus:ring-mulberry focus:border-mulberry"
                       placeholder="Tell me a little about your project or question..."
                     />
                   </div>
@@ -154,7 +166,8 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full bg-mulberry hover:bg-mulberry/90 text-white font-semibold py-3 rounded-xl transition-colors inline-flex items-center justify-center gap-2"
+                    className="w-full bg-mulberry hover:bg-mulberry/90 text-white font-semibold py-3 rounded-xl 
+                    transition-colors inline-flex items-center justify-center gap-2"
                   >
                     <FontAwesomeIcon icon={faPaperPlane} className="text-white" />
                     Send Message

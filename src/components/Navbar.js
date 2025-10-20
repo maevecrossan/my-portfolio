@@ -17,7 +17,7 @@ const navLinks = [
 const quickLinks = [
     { href: "https://github.com/maevecrossan", label: "GitHub", icon: faGithub },
     { href: "https://www.linkedin.com/in/maeve-crossan/", label: "LinkedIn", icon: faLinkedin },
-    { href: "/MaeveCrossan.pdf", label: "View CV", icon: faFileArrowDown, download: true },
+    { href: "/MaeveCrossan.pdf", label: "Download CV", icon: faFileArrowDown, download: true },
 ];
 
 export default function Navbar() {
@@ -90,7 +90,9 @@ export default function Navbar() {
                                                 {...(item.download
                                                     ? { download: "MaeveCrossan.pdf" }
                                                     : { target: "_blank", rel: "noopener noreferrer" })}
-                                                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-nunito text-white/90 transition hover:bg-white/20"
+                                                className="inline-flex items-center justify-center gap-2 rounded-full border 
+                                                border-white/30 bg-white/10 px-4 py-2 text-sm font-nunito text-white/90 transition 
+                                                hover:bg-white/20"
                                                 onClick={() => setMobileOpen(false)}
                                             >
                                                 <FontAwesomeIcon icon={item.icon} className="text-base" />
@@ -123,10 +125,15 @@ export default function Navbar() {
                                 {...(item.download
                                     ? { download: "MaeveCrossan.pdf" }
                                     : { target: "_blank", rel: "noopener noreferrer" })}
-                                className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/10 p-2 text-white/80 transition hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-mulberry/30"
+                                className="group inline-flex items-center justify-center rounded-full border border-white/25 bg-white/10 p-2 text-white/80 transition hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-mulberry/30"
                                 aria-label={item.label}
                             >
                                 <FontAwesomeIcon icon={item.icon} className="text-lg" />
+                                <span className="pointer-events-none absolute bottom-0 translate-y-full rounded-full bg-white/90 px-3 
+                                py-2 text-[10px] font-nunito uppercase tracking-[0.3em] text-mulberry opacity-0 shadow-lg transition 
+                                group-hover:translate-y-[2rem] group-hover:opacity-100 text-center">
+                                    {item.label}
+                                </span>
                             </a>
                         ))}
                     </div>

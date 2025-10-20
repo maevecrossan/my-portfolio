@@ -17,31 +17,37 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="flex flex-col items-center min-h-screen m-2">
+    <main className="flex flex-col items-center min-h-screen w-full px-4 py-10 md:px-10 md:py-16 gap-12 bg-gradient-to-b from-mulberry/10 via-heather/5 to-leaf/10">
       {/* Header card */}
-      <div className="mx-auto px-4 ml-4 mr-4 mt-12 bg-heather shadow-xl text-center 
-      rounded-xl ring-4 ring-leaf ring-offset-2 ring-offset-white animate-drop-in" style={{ ['--delay']: '0ms' }}>
-        <h3 className="text-white mt-10 mb-6 text-3xl font-semibold font-melodrama">
-          Get in Touch
-        </h3>
-        <p className="text-white mb-12 text-lg max-w-2xl mx-auto">
-          Have a project idea, a question, or just want to say hi? Drop me a message below - I’ll get back to you as soon as I can.
-        </p>
-      </div>
+      <section
+        className="relative w-full max-w-4xl overflow-hidden rounded-[3rem] bg-heather/90 px-6 py-10 md:px-12 md:py-14 shadow-2xl border border-white/15 ring-4 ring-white/30 ring-offset-4 ring-offset-mulberry/20 animate-drop-in"
+        style={{ ['--delay']: '0ms' }}
+        aria-labelledby="contact-heading"
+      >
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.18),transparent_60%)]" aria-hidden />
+        <div className="relative text-center flex flex-col items-center gap-6">
+          <h3 id="contact-heading" className="text-white text-4xl md:text-5xl font-melodrama">
+            Get in Touch
+          </h3>
+          <p className="text-white/85 text-base md:text-lg max-w-2xl font-nunito">
+            Have a project idea, a question, or just want to say hi? Drop me a message below - I’ll get back to you as soon as I can.
+          </p>
+        </div>
+      </section>
 
       {/* Contact card */}
-      <div className="w-full max-w-screen-xl py-10 px-4 animate-drop-in" style={{ ['--delay']: '140ms' }}>
-        <div className="relative w-full rounded-3xl mt-10">
-          <div className="absolute inset-0 rounded-3xl bg-white/50 pointer-events-none" />
-          <div className="relative w-full rounded-3xl p-8 md:p-10 bg-heather/50 
-          backdrop-blur-xl shadow-xl text-evergreen ring-4 ring-leaf ring-offset-2 
-          ring-offset-white">
+      <section className="w-full max-w-6xl animate-drop-in" style={{ ['--delay']: '140ms' }}>
+        <div className="relative w-full rounded-[3rem] overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none rounded-[3rem] bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.28),transparent_55%)]" aria-hidden />
+          <div className="relative w-full rounded-[3rem] overflow-hidden border border-white/25 bg-white/12 backdrop-blur-2xl shadow-2xl ring-4 ring-white/20 ring-offset-4 ring-offset-mulberry/15">
+            <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(135deg,rgba(104,76,96,0.45),rgba(103,114,92,0.35))]" aria-hidden />
+            <div className="relative p-8 md:p-12 text-evergreen">
             {/* Two-column on lg+, stacked on sm/md */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
               {/* LEFT: Intro + direct links */}
               <div>
-                <div className="border-b border-evergreen/40 pb-4 mb-6">
-                  <h4 className="text-mulberry mb-2 text-3xl font-bold font-nunito text-center 
+                <div className="border-b border-evergreen pb-4 mb-6">
+                  <h4 className="text-white/80 mb-2 text-3xl font-bold font-nunito text-center 
                   lg:text-left">
                     Let’s work together
                   </h4>
@@ -51,41 +57,35 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                <div className="grid gap-3 text-mulberry">
-
-                  <div className="flex items-center gap-3">
-                    <a
-                      href="https://github.com/maevecrossan"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center bg-heather/60 gap-2 px-3 py-2 rounded-xl ring-2 
-                      ring-mulberry hover:bg-heather/50 transition"
-                    >
-                      <FontAwesomeIcon icon={faGithub} />
-                      <span className="font-medium">GitHub</span>
-                    </a>
-                    <a
-                      href="https://www.linkedin.com/in/maeve-crossan/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center bg-heather/60 gap-2 px-3 py-2 rounded-xl ring-2 
-                      ring-mulberry hover:bg-heather/50 transition"
-                    >
-                      <FontAwesomeIcon icon={faLinkedin} />
-                      <span className="font-medium">LinkedIn</span>
-                    </a>
-                    <a
-                      href="/MaeveCrossan.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center bg-heather/60 gap-2 px-3 py-2 rounded-xl ring-2 
-                      ring-mulberry hover:bg-heather/50 transition"
-                      onClick={handleCvDownload}
-                    >
-                      <FontAwesomeIcon icon={faFileArrowDown} />
-                      <span className="font-medium">View CV</span>
-                    </a>
-                  </div>
+                <div className="flex flex-wrap items-center gap-3 text-white">
+                  <a
+                    href="https://github.com/maevecrossan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-4 py-2 font-nunito text-sm text-white/90 transition hover:bg-white/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-heather/40"
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                    <span className="font-medium">GitHub</span>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/maeve-crossan/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-4 py-2 font-nunito text-sm text-white/90 transition hover:bg-white/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-heather/40"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} />
+                    <span className="font-medium">LinkedIn</span>
+                  </a>
+                  <a
+                    href="/MaeveCrossan.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-4 py-2 font-nunito text-sm text-white/90 transition hover:bg-white/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-heather/40"
+                    onClick={handleCvDownload}
+                  >
+                    <FontAwesomeIcon icon={faFileArrowDown} />
+                    <span className="font-medium">View CV</span>
+                  </a>
                 </div>
               </div>
 
@@ -173,7 +173,7 @@ export default function ContactPage() {
                     Send Message
                   </button>
 
-                  <p className="text-xs text-mulberry/50 mt-2">
+                  <p className="text-xs text-mulberry mt-2">
                     This form uses Formspree to securely forward messages to my inbox.
                   </p>
                 </form>
@@ -182,6 +182,7 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+      </section>
     </main>
   );
 }

@@ -85,7 +85,7 @@ export default function Homepage() {
             className="flex flex-col items-center min-h-screen w-full px-4 py-10 md:px-10 md:py-16 gap-14 bg-gradient-to-b from-mulberry/10 via-heather/5 to-leaf/10"
         >
             <section
-                className="w-full max-w-5xl rounded-full bg-leaf/90 px-6 py-3 md:px-10 md:py-4 text-white shadow-xl flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-nunito uppercase tracking-[0.3em] text-xs md:text-sm animate-drop-in"
+                className="w-full max-w-5xl rounded-full bg-leaf/90 px-5 py-4 md:px-10 md:py-4 text-white shadow-xl flex flex-col items-center justify-center gap-1.5 text-center font-nunito uppercase tracking-[0.18em] text-[0.7rem] sm:text-xs md:flex-row md:flex-wrap md:gap-x-6 md:gap-y-2 md:text-sm md:tracking-[0.3em] animate-drop-in"
                 style={{ ["--delay"]: "0ms" }}
                 aria-label="announcement bar"
             >

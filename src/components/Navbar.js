@@ -32,7 +32,7 @@ export default function Navbar() {
                 {/* Announcement strip */}
                 <div className="hidden md:flex items-center justify-center gap-2 text-xs font-nunito uppercase tracking-[0.35em] 
                 text-mulberry/80">
-                    <span>Now booking collaborations for 2025</span>
+                    <span>Now booking collaborations for 2026</span>
                 </div>
 
                 <div className="relative flex w-full items-center justify-between gap-4">

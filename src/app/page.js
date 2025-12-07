@@ -89,7 +89,7 @@ export default function Homepage() {
                 style={{ ["--delay"]: "0ms" }}
                 aria-label="announcement bar"
             >
-                <span>Now booking collaborations for 2025</span>
+                <span>Now booking collaborations for 2026</span>
                 <span className="hidden md:inline">•</span>
                 <span>Remote-friendly</span>
                 <span className="hidden md:inline">•</span>

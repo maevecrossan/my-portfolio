@@ -752,7 +752,7 @@ export default function PreviousWorkClient() {
 						className="mt-8 flex items-center justify-center gap-2 rounded-full 
 						border border-white/50 bg-white/10 px-5 py-3 font-nunito text-sm 
 						text-white transition hover:bg-white/20 focus:outline-none 
-						focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 f
+						focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2
 						ocus-visible:ring-offset-heather lg:hidden"
 					>
 						{expandedProjects.laluna ? 'Hide Details' : 'View Details'}

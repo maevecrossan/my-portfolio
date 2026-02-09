@@ -8,6 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function PreviousWorkClient() {
+
 	const [expandedProjects, setExpandedProjects] = useState({});
 
 	const toggleProject = (projectId) => {
@@ -88,7 +89,7 @@ export default function PreviousWorkClient() {
 							Cosy Focus - A gamified habit tracking app.
 						</dt>
 						<dd className="mt-3 text-base md:text-lg font-nunito text-mulberry/90 leading-relaxed">
-							The aim of cosy focus is to add a game element to a to-do list. Have an exam to study for or work to get done? We aim provide an environment that helps you keep off your devices and focus the task at hand. The best part? You can earn XP to expand and unlock new study spaces. Using your avatar, you can visit new locations, from cosy coffee shops to peaceful rainforests. Cosy focus adds a visual element to studying and focusing, tracking how long you've been focusing on a task.
+							The aim of cosy focus is to add a game element to a to-do list. Have an exam to study for or work to get done? We aim provide an environment that helps you keep off your devices and focus the task at hand. The best part? You can earn XP to expand and unlock new study spaces. Using your avatar, you can visit new locations, from cosy coffee shops to peaceful rainforests. Cosy focus adds a visual element to studying and focusing, tracking how long you&apos;ve been focusing on a task.
 						</dd>
 					</div>
 				</dl>

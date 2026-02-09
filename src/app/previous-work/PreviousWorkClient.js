@@ -65,7 +65,7 @@ export default function PreviousWorkClient() {
 				</div>
 			</section>
 
-			{/* WIP Projects: Skincare brand page & Workout tracker*/}
+			{/* WIP Projects */}
 			<section
 				className="w-full max-w-6xl mx-auto rounded-[3rem] bg-white/70 px-6 py-10 md:px-12 md:py-14 shadow-2xl border border-mulberry/15 animate-drop-in"
 				style={{ ['--delay']: '80ms' }}
@@ -82,22 +82,13 @@ export default function PreviousWorkClient() {
 						Quick peeks at experiments on the bench - for fun and personal growth.
 					</p>
 				</div>
-				<dl className="grid gap-6 md:grid-cols-2">
+				<dl className="grid gap-6 md:grid-cols-1">
 					<div className="rounded-2xl border border-mulberry/20 bg-white p-6 shadow-lg text-left">
 						<dt className="text-xs uppercase tracking-[0.35em] font-nunito text-mulberry/70">
-							Skincare Brand Practice Site
+							Cosy Focus - A gamified habit tracking app.
 						</dt>
 						<dd className="mt-3 text-base md:text-lg font-nunito text-mulberry/90 leading-relaxed">
-							A lightweight playground that stays intentionally superficial - 
-							ideal for testing layouts, hover states, and colour systems with zero production pressure.
-						</dd>
-					</div>
-					<div className="rounded-2xl border border-mulberry/20 bg-white p-6 shadow-lg text-left">
-						<dt className="text-xs uppercase tracking-[0.35em] font-nunito text-mulberry/70">
-							Forge Fitness Tracker
-						</dt>
-						<dd className="mt-3 text-base md:text-lg font-nunito text-mulberry/90 leading-relaxed">
-							Laying the groundwork for the Forge Fitness roadmap—progressive overload guidance, habit streak analytics, social challenges, and trainer dashboards (see GitHub plan).
+							The aim of cosy focus is to add a game element to a to-do list. Have an exam to study for or work to get done? We aim provide an environment that helps you keep off your devices and focus the task at hand. The best part? You can earn XP to expand and unlock new study spaces. Using your avatar, you can visit new locations, from cosy coffee shops to peaceful rainforests. Cosy focus adds a visual element to studying and focusing, tracking how long you've been focusing on a task.
 						</dd>
 					</div>
 				</dl>
